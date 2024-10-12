@@ -14,10 +14,11 @@
         <div class="welcome">
             <h4 class="Welcome-msg">Are you ready to play Shut The Box?</h4>
         </div>
-        <button type="button" class="btn" onclick="showRules()">How to play</button>
+        <button type="button" id="rules-btn" class="btn" onclick="showRules()">How to play</button>
         <div id="game-rules" class="rules">
             <div class="rules-content">
-                <span class="calose">&times;</span>
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3>How To Play<h3>
                 <p>To start a player roll the dice by clicking the Roll Dice button then add up the total of their roll. 
                     They then lower 1 or more tiles that equal the total they rolled. For example, 
                     if a player rolled a 4 and a 3, their total is 7. 

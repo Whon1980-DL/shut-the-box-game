@@ -1,5 +1,22 @@
+/* Google font */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
     font-family: "Press Start 2P", system-ui;
+    color: white;
+}
+
+.main-container {
+    background-image: url(../image/retro-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+    width: 85%;
+    height: 65vh;
+    max-height: 450px;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    text-align: center;
 }

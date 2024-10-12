@@ -1,9 +1,12 @@
 /* Google font */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&display=swap');
 
 body {
     font-family: "Press Start 2P", system-ui;
     color: white;
+    letter-spacing: 2px;
+    line-height: 30px;
 }
 
 .main-container {
@@ -28,6 +31,7 @@ body {
     background-color: rgba(0, 0, 0, 0);
     font-family: "Press Start 2P", system-ui;
     color: white;
+    letter-spacing: 2px;
     border-radius: 20px;
 }
 
@@ -53,8 +57,9 @@ body {
     height: 40%;
     overflow: auto;
     font-size: small;
-    font-weight: 100;
     border-radius: 20px;
+    font-family: "IBM Plex Mono", monospace;
+    letter-spacing: 1px;
     color: darkred;
     text-align: left;
 }

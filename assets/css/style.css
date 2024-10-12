@@ -7,6 +7,7 @@ body {
     color: white;
     letter-spacing: 2px;
     line-height: 30px;
+    overflow: auto;
 }
 
 .uppercase {
@@ -33,7 +34,7 @@ body {
     font-size: 50px;
     color: rgb(240, 212, 53);
     line-height: 60px;
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 .choice-btn {
@@ -46,6 +47,7 @@ body {
     letter-spacing: 2px;
     border-radius: 20px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 /* Game rules area */
@@ -63,7 +65,7 @@ body {
 }
 
 #rules-btn {
-    margin-top: 80px;
+    margin-top: 70px;
 }
 
 /* Style for modal box */
@@ -71,7 +73,7 @@ body {
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
+    padding-top: -10px;
     left: 0;
     right: 0;
     width: 100%;

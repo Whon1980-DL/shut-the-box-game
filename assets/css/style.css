@@ -45,12 +45,13 @@ body {
     color: white;
     letter-spacing: 2px;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 /* Game rules area */
 .btn {
-    height: 50px;
-    width: 220px;
+    height: 30px;
+    width: 190px;
     padding: 5px;
     border: 2px dotted rgb(238, 212, 206);
     background-color: rgba(0, 0, 0, 0);
@@ -58,10 +59,11 @@ body {
     color: white;
     letter-spacing: 2px;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 #rules-btn {
-    margin-top: 200px;
+    margin-top: 80px;
 }
 
 /* Style for modal box */
@@ -107,4 +109,9 @@ body {
     color: rgb(105, 0, 0);
     text-decoration: none;
     cursor: pointer;
+}
+
+img#home-btn {
+    height: 30px;
+    float: left;
 }

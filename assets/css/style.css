@@ -20,3 +20,14 @@ body {
     padding: 1%;
     text-align: center;
 }
+
+.btn {
+    height: 60px;
+    width: 220px;
+    border: 2px dotted rgb(238, 212, 206);
+    background-color: rgba(0, 0, 0, 0);
+    font-family: "Press Start 2P", system-ui;
+    color: white;
+    border-radius: 20px;
+
+}

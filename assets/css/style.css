@@ -28,7 +28,15 @@ body {
     text-align: center;
 }
 
-.btn {
+/* Start game area */
+#start-msg {
+    font-size: 50px;
+    color: rgb(240, 212, 53);
+    line-height: 60px;
+    margin-top: 100px;
+}
+
+.choice-btn {
     height: 60px;
     width: 220px;
     border: 2px dotted rgb(238, 212, 206);
@@ -37,6 +45,23 @@ body {
     color: white;
     letter-spacing: 2px;
     border-radius: 20px;
+}
+
+/* Game rules area */
+.btn {
+    height: 50px;
+    width: 220px;
+    padding: 5px;
+    border: 2px dotted rgb(238, 212, 206);
+    background-color: rgba(0, 0, 0, 0);
+    font-family: "Press Start 2P", system-ui;
+    color: white;
+    letter-spacing: 2px;
+    border-radius: 20px;
+}
+
+#rules-btn {
+    margin-top: 200px;
 }
 
 /* Style for modal box */

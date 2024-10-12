@@ -9,6 +9,10 @@ body {
     line-height: 30px;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
 .main-container {
     background-image: url(../image/retro-bg.jpg);
     background-position: center;
@@ -62,6 +66,7 @@ body {
     letter-spacing: 1px;
     color: darkred;
     text-align: left;
+    text-transform: none;
 }
 
 /* Style for the close button*/

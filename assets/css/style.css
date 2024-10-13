@@ -44,7 +44,7 @@ body {
     border: 2px dashed rgb(238, 212, 206);
     background-color: rgba(0, 0, 0, 0);
     font-family: "Press Start 2P", system-ui;
-    color: white;
+    color: cornsilk;
     letter-spacing: 2px;
     cursor: pointer;
     margin-top: 10px;
@@ -58,7 +58,7 @@ body {
     border: 2px dashed rgb(238, 212, 206);
     background-color: rgba(0, 0, 0, 0);
     font-family: "Press Start 2P", system-ui;
-    color: white;
+    color: cornsilk;
     letter-spacing: 2px;
     cursor: pointer;
 }
@@ -82,7 +82,7 @@ body {
 }
 
 .rules-content {
-    background-color: #fefefe;
+    background-color: cornsilk;
     margin: auto;
     padding: 20px;
     border: 2px dashed darkred;
@@ -124,8 +124,9 @@ body {
     font-size: 8px;
 }
 
+/* Tiles */
 .tiles-container {
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 .tile {
@@ -136,4 +137,25 @@ body {
     color: brown;
     text-align: center;
     line-height: 90px;
+}
+
+/* Dice */
+
+.dice-container {
+    display: flex;
+    max-width: 50%;
+    margin: auto;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.dice img {
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+}
+
+/* Game button area */
+.btn-area-container {
+    margin-top: 20px;
 }

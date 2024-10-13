@@ -24,4 +24,14 @@ function rollTheDice() {
 
     diceNum1.setAttribute("src","assets/image/game-page-image/rolling-dice1.gif");
     diceNum2.setAttribute("src","assets/image/game-page-image/rolling-dice2.gif");
+
+    setTimeout (() => {
+        let randomNumber1 = Math.floor(Math.random() * 6) + 1;
+        let randomNumber2 = Math.floor(Math.random() * 6) + 1;
+
+        diceNum1.setAttribute("src","assets/image/game-page-image/dice" + randomNumber1 + ".png");
+        diceNum2.setAttribute("src","assets/image/game-page-image/dice" + randomNumber2 + ".png");
+    }, 2500);
+
+    //return;
 }

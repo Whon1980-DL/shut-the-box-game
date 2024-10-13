@@ -112,8 +112,28 @@ body {
     cursor: pointer;
 }
 
+/* Style for game page */
+.game-canvas {
+    display: flex;
+    flex-direction: column;
+}
+
 #ext-btn {
     width: 150px;
     float: left;
     font-size: 8px;
+}
+
+.tiles-container {
+    margin-top: 70px;
+}
+
+.tile {
+    height: 140px;
+    width: 70px;
+    display: inline-block;
+    background-color: cornsilk;
+    color: brown;
+    text-align: center;
+    line-height: 90px;
 }

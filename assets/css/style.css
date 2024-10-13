@@ -41,7 +41,7 @@ body {
     height: 60px;
     width: 220px;
     padding: 10px;
-    border: 2px dashed rgb(238, 212, 206);
+    border: 2px dashed cornsilk;
     background-color: rgba(0, 0, 0, 0);
     font-family: "Press Start 2P", system-ui;
     color: cornsilk;
@@ -55,7 +55,7 @@ body {
     height: 30px;
     width: 190px;
     padding: 10px;
-    border: 2px dashed rgb(238, 212, 206);
+    border: 2px dashed cornsilk;
     background-color: rgba(0, 0, 0, 0);
     font-family: "Press Start 2P", system-ui;
     color: cornsilk;
@@ -158,4 +158,8 @@ body {
 /* Game button area */
 .btn-area-container {
     margin-top: 20px;
+}
+
+#dice-btn {
+    font-size: 8px;
 }

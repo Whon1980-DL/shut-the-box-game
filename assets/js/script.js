@@ -16,3 +16,12 @@ window.onclick = function(event) {
       modal.style.display = "none";
     }
 }
+
+//Function for rolling the dice
+function rollTheDice() {
+    let diceNum1 = document.querySelector(".img1");
+    let diceNum2 = document.querySelector(".img2");
+
+    diceNum1.setAttribute("src","assets/image/game-page-image/rolling-dice1.gif");
+    diceNum2.setAttribute("src","assets/image/game-page-image/rolling-dice2.gif");
+}

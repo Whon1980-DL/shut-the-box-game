@@ -37,10 +37,8 @@ function rollTheDice() {
     }, 2500);
 }
 
-console.log(rollTheDice());
+let diceOneValue = parseInt(document.getElementById("dice-1-value").innerHTML);
+let diceTwoValue = parseInt(document.getElementById("dice-2-value").innerHTML);
+let sumOfDice = diceOneValue + diceTwoValue;
+console.log(sumOfDice);
 
-
-//Function to flip the tile
-function flipTheTile() {
-
-}

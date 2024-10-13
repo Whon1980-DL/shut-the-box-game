@@ -40,12 +40,12 @@ body {
 .choice-btn {
     height: 60px;
     width: 220px;
-    border: 2px dotted rgb(238, 212, 206);
+    padding: 10px;
+    border: 2px dashed rgb(238, 212, 206);
     background-color: rgba(0, 0, 0, 0);
     font-family: "Press Start 2P", system-ui;
     color: white;
     letter-spacing: 2px;
-    border-radius: 20px;
     cursor: pointer;
     margin-top: 10px;
 }
@@ -54,26 +54,26 @@ body {
 .btn {
     height: 30px;
     width: 190px;
-    padding: 5px;
-    border: 2px dotted rgb(238, 212, 206);
+    padding: 10px;
+    border: 2px dashed rgb(238, 212, 206);
     background-color: rgba(0, 0, 0, 0);
     font-family: "Press Start 2P", system-ui;
     color: white;
     letter-spacing: 2px;
-    border-radius: 20px;
     cursor: pointer;
 }
 
 #rules-btn {
     margin-top: 70px;
+    font-size: 8px;
 }
 
 /* Style for modal box */
 .rules {
     display: none;
-    position: fixed;
     z-index: 1;
-    padding-top: -10px;
+    margin-top: 0;
+    padding-top: 0;
     left: 0;
     right: 0;
     width: 100%;
@@ -85,12 +85,11 @@ body {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
-    border: 1px solid darkred;
+    border: 2px dashed darkred;
     width: 80%;
     height: 40%;
     overflow: auto;
     font-size: small;
-    border-radius: 20px;
     font-family: "IBM Plex Mono", monospace;
     letter-spacing: 1px;
     color: darkred;

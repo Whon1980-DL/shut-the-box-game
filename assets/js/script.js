@@ -17,7 +17,7 @@ window.onclick = function(event) {
     }
 }
 
-//Function for rolling the dice
+//Function to roll the dice
 function rollTheDice() {
     let diceNum1 = document.querySelector(".img1");
     let diceNum2 = document.querySelector(".img2");
@@ -31,7 +31,16 @@ function rollTheDice() {
 
         diceNum1.setAttribute("src","assets/image/game-page-image/dice" + randomNumber1 + ".png");
         diceNum2.setAttribute("src","assets/image/game-page-image/dice" + randomNumber2 + ".png");
-    }, 2500);
 
-    //return;
+        document.getElementById("dice-1-value").innerHTML = randomNumber1;
+        document.getElementById("dice-2-value").innerHTML = randomNumber2;
+    }, 2500);
+}
+
+console.log(rollTheDice());
+
+
+//Function to flip the tile
+function flipTheTile() {
+
 }

@@ -145,6 +145,11 @@ body {
     cursor: pointer;
 }
 
+.tile:hover {
+    background-color: brown;
+    color: cornsilk;
+}
+
 /* Dice */
 
 .dice-container {

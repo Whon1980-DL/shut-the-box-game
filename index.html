@@ -10,6 +10,7 @@
     <title>Shut The Box Game</title>
 </head>
 <body>
+    <!-- Start screen area -->
     <section id="start-screen">
         <div class="main-container uppercase">
             <div class="welcome">
@@ -49,21 +50,21 @@
             </div>
         </div>
     </section>
+   <!-- Game screen area --> 
     <section id="game-screen">
         <div class="main-container uppercase game-canvas">
-            <a href="index.html">
                 <button type="button" id="ext-btn" class="btn uppercase" onclick="showStart()">Exit game</button></a>
             <div class="game-area">
                 <div class="tiles-container" id="tiles-box">
-                    <div class="tile" id="tile-1" onclick="flipTheTile()"><h1>1</h1></div>
-                    <div class="tile" id="tile-2" onclick="flipTheTile()"><h1>2</h1></div>
-                    <div class="tile" id="tile-3" onclick="flipTheTile()"><h1>3</h1></div>
-                    <div class="tile" id="tile-4" onclick="flipTheTile()"><h1>4</h1></div>
-                    <div class="tile" id="tile-5" onclick="flipTheTile()"><h1>5</h1></div>
-                    <div class="tile" id="tile-6" onclick="flipTheTile()"><h1>6</h1></div>
-                    <div class="tile" id="tile-7" onclick="flipTheTile()"><h1>7</h1></div>
-                    <div class="tile" id="tile-8" onclick="flipTheTile()"><h1>8</h1></div>
-                    <div class="tile" id="tile-9" onclick="flipTheTile()"><h1>9</h1></div>
+                    <button class="tile" id="tile-one" onclick="flipTile()">1</button>
+                    <button class="tile" id="tile-two" onclick="flipTile()">2</button>
+                    <button class="tile" id="tile-three" onclick="flipTile()">3</button>
+                    <button class="tile" id="tile-four" onclick="flipTile()">4</button>
+                    <button class="tile" id="tile-five" onclick="flipTile()">5</button>
+                    <button class="tile" id="tile-six" onclick="flipTile()">6</button>
+                    <button class="tile" id="tile-seven" onclick="flipTile()">7</button>
+                    <button class="tile" id="tile-eight" onclick="flipTile()">8</button>
+                    <button class="tile" id="tile-nine" onclick="flipTile()">9</button>
                  </div>
                  <div class="dice-container" id="dice-box">
                     <div class="dice" id="dice-1">
@@ -81,6 +82,7 @@
             </div>
         </div>
     </section>
+    <!-- End screen area -->
     <section id="end-screen">
 
     </section>

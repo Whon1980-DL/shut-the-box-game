@@ -149,6 +149,8 @@ section#game-screen {
     text-align: center;
     line-height: 90px;
     cursor: pointer;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 20px;
 }
 
 .tile:hover {

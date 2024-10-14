@@ -32,7 +32,10 @@ function showStart() {
     game.style.display = "none";
 }
 
-
+// Create array to store cards that have already been fliped
+let flipArray = [];
+let flipTile = 0;
+let sumOfDice = 0;
 
 //Function to roll the dice
 function rollTheDice() {
@@ -53,30 +56,20 @@ function rollTheDice() {
         document.getElementById("dice-2-value").innerHTML = randomNumber2;
     }, 2500);
 }
+// Set variable for dice value and sum of two dice
+let diceOneValue = parseInt(document.getElementById("dice-1-value").innerHTML);
+let diceTwoValue = parseInt(document.getElementById("dice-2-value").innerHTML);
+    sumOfDice = diceOneValue + diceTwoValue;
 
-let tileOne = document.getElementById("tile-1");
-let tileTwo = document.getElementById("tile-2");
-let tileThree = document.getElementById("tile-3");
-let tileFour = document.getElementById("tile-4");
-let tileFive = document.getElementById("tile-5");
-let tileSix = document.getElementById("tile-6");
-let tileSeven = document.getElementById("tile-7");
-let tileEight = document.getElementById("tile-8");
-let tileNine = document.getElementById("tile-9");
-
-
-function flipTheTile() {
-    let diceOneValue = parseInt(document.getElementById("dice-1-value").innerHTML);
-    let diceTwoValue = parseInt(document.getElementById("dice-2-value").innerHTML);
-    let sumOfDice = diceOneValue + diceTwoValue;
-    console.log(sumOfDice);
-
-    if (sumOfDice === 1) {
-        tileOne
-    }
+//unction flipTile() {
+    //let choosenTile = document.getElementsByClassName("tile");
+        //choosenTile = event.
+//}
+    
 
     
 
 
-}
+
+
 

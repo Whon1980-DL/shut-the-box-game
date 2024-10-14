@@ -10,44 +10,80 @@
     <title>Shut The Box Game</title>
 </head>
 <body>
-    <div class="main-container uppercase">
-        <div class="welcome">
-            <h4 class="welcome-msg">Are you ready to play Shut The Box?</h4>
-        </div>
-        <div class="game-start-container" id="start">
-            <h1 id="start-msg">Start game</h1>
-            <div class="launch-btn-container" id="luanch-btn">
-                <a href="game-page.html"><button type="button" id="two-p-btn" class="choice-btn uppercase" onclick="">2 Players</button></a>
-                <a href="game-page.html"><button type="button" id="vs-com-btn" class="choice-btn uppercase" onclick="">vs computer</button></a>
+    <section id="start-screen">
+        <div class="main-container uppercase">
+            <div class="welcome">
+                <h4 class="welcome-msg">Are you ready to play Shut The Box?</h4>
             </div>
-        </div>
-        <button type="button" id="rules-btn" class="btn" onclick="showRules()">How to play</button>
-        <div id="game-rules" class="rules">
-            <div class="rules-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <h3>How To Play<h3>
-                <p>To start, a player roll the dice by clicking the Roll Dice button then add up the total of their roll. 
+            <div class="game-start-container" id="start">
+                <h1 id="start-msg">Start game</h1>
+                <div class="launch-btn-container" id="luanch-btn">
+                    <button type="button" id="two-p-btn" class="choice-btn uppercase" onclick="unhideGame()">2 Players</button>
+                    <button type="button" id="vs-com-btn" class="choice-btn uppercase" onclick="unhideGame()">vs computer</button>
+                </div>
+            </div>
+            <button type="button" id="rules-btn" class="btn" onclick="showRules()">How to play</button>
+            <div id="game-rules" class="rules">
+                <div class="rules-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h3>How To Play<h3>
+                    <p>To start, a player roll the dice by clicking the Roll Dice button then add up the total of their roll. 
                     They then lower 1 or more tiles that equal the total they rolled. For example, 
                     if a player rolled a 4 and a 3, their total is 7. 
                     Therefore, they could choose to lower one of the following tile combinations:
-                </p>
-                <ul>
-                    <li>7</li>
-                    <li>4 & 3</li>
-                    <li>5 & 2</li>
-                    <li>6 & 1</li>
-                    <li>4, 2 & 1</li>
-                </ul>
-                <p>After lowering the tile(s), the player continues to roll the dice and lower tiles until they reach the point where no tiles correspond with the total they roll. F
+                    </p>
+                    <ul>
+                        <li>7</li>
+                        <li>4 & 3</li>
+                        <li>5 & 2</li>
+                        <li>6 & 1</li>
+                        <li>4, 2 & 1</li>
+                    </ul>
+                    <p>After lowering the tile(s), the player continues to roll the dice and lower tiles until they reach the point where no tiles correspond with the total they roll. F
                     or example, if the total of a player’s roll is 6 and only the 7 and 2 tiles remain upright, they’re unable to lower any tiles and their turn is over. 
                     Once a player’s turn is over, the next player starts their turn with all of the tiles in the upright position. This continues until each player has taken one turn.
-                </p><br>
-                <p>Players add the total of any upright tiles at the end of their turn to their score. The player with the lowest score wins!
-                </p>
+                    </p><br>
+                    <p>Players add the total of any upright tiles at the end of their turn to their score. The player with the lowest score wins!
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    
+    </section>
+    <section id="game-screen">
+        <div class="main-container uppercase game-canvas">
+            <a href="index.html">
+                <button type="button" id="ext-btn" class="btn uppercase" onclick="showStart()">Exit game</button></a>
+            <div class="game-area">
+                <div class="tiles-container" id="tiles-box">
+                    <div class="tile" id="tile-1" onclick="flipTheTile()"><h1>1</h1></div>
+                    <div class="tile" id="tile-2" onclick="flipTheTile()"><h1>2</h1></div>
+                    <div class="tile" id="tile-3" onclick="flipTheTile()"><h1>3</h1></div>
+                    <div class="tile" id="tile-4" onclick="flipTheTile()"><h1>4</h1></div>
+                    <div class="tile" id="tile-5" onclick="flipTheTile()"><h1>5</h1></div>
+                    <div class="tile" id="tile-6" onclick="flipTheTile()"><h1>6</h1></div>
+                    <div class="tile" id="tile-7" onclick="flipTheTile()"><h1>7</h1></div>
+                    <div class="tile" id="tile-8" onclick="flipTheTile()"><h1>8</h1></div>
+                    <div class="tile" id="tile-9" onclick="flipTheTile()"><h1>9</h1></div>
+                 </div>
+                 <div class="dice-container" id="dice-box">
+                    <div class="dice" id="dice-1">
+                        <img src="assets/image/game-page-image/dice6.png" alt="Dice with 6 dots" class="img1">
+                    </div>
+                    <p class="hide" id="dice-1-value"></p>
+                    <div class="dice" id="dice-2">
+                        <img src="assets/image/game-page-image/dice6.png" alt="Dice with 6 dots" class="img2">
+                    </div>
+                    <p class="hide" id="dice-2-value"></p>
+                </div>
+                <div class="btn-area-container">
+                    <button type="button" class="btn" id="dice-btn" onclick="rollTheDice()">Roll The Dice</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="end-screen">
+
+    </section>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

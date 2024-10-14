@@ -1,4 +1,4 @@
-//Function for setting game rules box as modal box
+//Function to set game rules box as modal box
 let modal = document.getElementById("game-rules");
 let btn = document.getElementById("rules-btn");
 let close = document.getElementsByClassName("close")[0];
@@ -16,6 +16,23 @@ window.onclick = function(event) {
       modal.style.display = "none";
     }
 }
+
+//Function to hide or unhide homegame screen, game screen and end screen
+let home = document.getElementById("start-screen");
+let game = document.getElementById("game-screen");
+let end = document.getElementById("end-screen"); 
+
+function unhideGame() {
+    home.style.display = "none";
+    game.style.display = "block";
+}
+
+function showStart() {
+    home.style.display = "block";
+    game.style.display = "none";
+}
+
+
 
 //Function to roll the dice
 function rollTheDice() {

@@ -35,6 +35,10 @@ body {
 }
 
 /* Start game area */
+section#game-screen {
+    display: none;
+}
+
 #start-msg {
     font-size: 50px;
     color: rgb(240, 212, 53);

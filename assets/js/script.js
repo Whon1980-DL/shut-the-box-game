@@ -66,8 +66,6 @@ function rollTheDice() {
 
 rollDiceBtn.addEventListener('click', rollTheDice);
 
-console.log(sumOfDice);
-
 // Set variable for dice value and sum of two dice
 //let diceOne = document.getElementById("dice-1-value");
 //let diceOneValue = diceOne.innerHTML;
@@ -86,6 +84,7 @@ function flipTile(event) {
     let chosenTile = event.target;
     let chosenTileValue = chosenTile.innerHTML;
     
+    console.log(sumOfDice);
     
     
 }

@@ -1,8 +1,21 @@
-//Function to set game rules box as modal box
-let modal = document.getElementById("game-rules");
-let btn = document.getElementById("rules-btn");
-let close = document.getElementsByClassName("close")[0];
+const home = document.getElementById("start-screen");
+const game = document.getElementById("game-screen");
+const end = document.getElementById("end-screen"); 
+const gamePageBtn = document.getElementsByClassName('choice-btn')[0];
+const modal = document.getElementById("game-rules");
+const close = document.getElementsByClassName("close")[0];
+const startPageBtn = document.getElementById("ext-btn");
+const rollDiceBtn = document.getElementById("dice-btn");
 
+//Function to hide or unhide homegame screen, game screen and end screen
+function unhideGame() {
+    home.style.display = "none";
+    game.style.display = "block";
+}
+
+gamePageBtn.addEventListener('click', unhideGame);
+
+//Function to set game rules box as modal box
 function showRules() {
     modal.style.display = "block";
 }
@@ -17,25 +30,12 @@ window.onclick = function(event) {
     }
 }
 
-//Function to hide or unhide homegame screen, game screen and end screen
-let home = document.getElementById("start-screen");
-let game = document.getElementById("game-screen");
-let end = document.getElementById("end-screen"); 
-
-function unhideGame() {
-    home.style.display = "none";
-    game.style.display = "block";
-}
-
 function showStart() {
     home.style.display = "block";
     game.style.display = "none";
 }
 
-// Create array to store cards that have already been fliped
-let flipArray = [];
-let flipTile = 0;
-let sumOfDice = 0;
+startPageBtn.addEventListener('click', showStart);
 
 //Function to roll the dice
 function rollTheDice() {
@@ -56,6 +56,9 @@ function rollTheDice() {
         document.getElementById("dice-2-value").innerHTML = randomNumber2;
     }, 2500);
 }
+
+rollDiceBtn.addEventListener('click', rollTheDice);
+
 // Set variable for dice value and sum of two dice
 let diceOneValue = parseInt(document.getElementById("dice-1-value").innerHTML);
 let diceTwoValue = parseInt(document.getElementById("dice-2-value").innerHTML);

@@ -7,6 +7,7 @@ const close = document.getElementsByClassName("close")[0];
 const startPageBtn = document.getElementById("ext-btn");
 const rollDiceBtn = document.getElementById("dice-btn");
 const tiles = Array.from(document.querySelectorAll('.tile'));
+let sumOfDice = 0;
 
 //Function to hide or unhide homegame screen, game screen and end screen
 function unhideGame() {
@@ -53,18 +54,29 @@ function rollTheDice() {
         diceNum1.setAttribute("src","assets/image/game-page-image/dice" + randomNumber1 + ".png");
         diceNum2.setAttribute("src","assets/image/game-page-image/dice" + randomNumber2 + ".png");
 
-        document.getElementById("dice-1-value").innerHTML = randomNumber1;
-        document.getElementById("dice-2-value").innerHTML = randomNumber2;
+        //document.getElementById("dice-1-value").innerHTML = randomNumber1;
+        //document.getElementById("dice-2-value").innerHTML = randomNumber2;
+
+        sumOfDice = randomNumber1 + randomNumber2;
+        
+        return sumOfDice;
 
     }, 2500);
 }
 
 rollDiceBtn.addEventListener('click', rollTheDice);
 
+console.log(sumOfDice);
+
 // Set variable for dice value and sum of two dice
-let diceOneValue = parseInt(document.getElementById("dice-1-value").innerHTML);
-let diceTwoValue = parseInt(document.getElementById("dice-2-value").innerHTML);
-    sumOfDice = diceOneValue + diceTwoValue;
+//let diceOne = document.getElementById("dice-1-value");
+//let diceOneValue = diceOne.innerHTML;
+
+//console.log(diceOneValue);
+
+//let diceTwo = document.getElementById("dice-2-value");
+//let diceTwoValue = diceTwo.innerHTML;
+//let sumOfDice = diceOneValue + diceTwoValue;
 
 tiles.forEach(tile => {
     tile.addEventListener('click', flipTile);
@@ -73,7 +85,8 @@ tiles.forEach(tile => {
 function flipTile(event) {
     let chosenTile = event.target;
     let chosenTileValue = chosenTile.innerHTML;
-    console.log(chosenTileValue)
+    
+    
     
 }
     

@@ -6,6 +6,7 @@ const modal = document.getElementById("game-rules");
 const close = document.getElementsByClassName("close")[0];
 const startPageBtn = document.getElementById("ext-btn");
 const rollDiceBtn = document.getElementById("dice-btn");
+const tiles = Array.from(document.querySelectorAll('.tile'));
 
 //Function to hide or unhide homegame screen, game screen and end screen
 function unhideGame() {
@@ -54,6 +55,7 @@ function rollTheDice() {
 
         document.getElementById("dice-1-value").innerHTML = randomNumber1;
         document.getElementById("dice-2-value").innerHTML = randomNumber2;
+
     }, 2500);
 }
 
@@ -64,10 +66,16 @@ let diceOneValue = parseInt(document.getElementById("dice-1-value").innerHTML);
 let diceTwoValue = parseInt(document.getElementById("dice-2-value").innerHTML);
     sumOfDice = diceOneValue + diceTwoValue;
 
-//unction flipTile() {
-    //let choosenTile = document.getElementsByClassName("tile");
-        //choosenTile = event.
-//}
+tiles.forEach(tile => {
+    tile.addEventListener('click', flipTile);
+})
+
+function flipTile(event) {
+    let chosenTile = event.target;
+    let chosenTileValue = chosenTile.innerHTML;
+    console.log(chosenTileValue)
+    
+}
     
 
     

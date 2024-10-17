@@ -91,29 +91,40 @@ function flipTile(event) {
     //let pickedTileThree = 0;
     //let pickedTileFour = 0;
     
-    if (chosenTileValue < sumOfDice && flippedTileArray.indexOf(chosenTileValue ) == -1 && flippedTileArray.length === 0) {
+    if (chosenTileValue > sumOfDice) {  
+        alert("Wrong flip");
+     } else if (chosenTileValue < sumOfDice && flippedTileArray.length === 0) {
         flippedTileArray.push(chosenTileValue); 
         pickedTileOne = flippedTileArray[0];
-        chosenTile.style.backgroundColor = "brown";
+        chosenTile.style.visibility = "hidden";
         alert("Flip more tile.");
-    } else if (chosenTileValue = sumOfDice && flippedTileArray.indexOf(chosenTileValue ) == -1) {
-        flippedTileArray.push(chosenTileValue);
-        chosenTile.style.backgroundColor = "brown";
+    } else if (chosenTileValue = sumOfDice)  {
+        //flippedTileArray.push(chosenTileValue);
+        flippedTileArray = [];
+        chosenTile.style.visibility = "hidden";
         alert('Great Job!');
-    } else if (chosenTileValue + pickedTileOne == sumOfDice && flippedTileArray.indexOf(chosenTileValue ) == -1) {
-        flippedTileArray.push(chosenTileValue);
-        chosenTile.style.backgroundColor = "brown";
+    } else if (chosenTileValue + pickedTileOne == sumOfDice)  {
+        //flippedTileArray.push(chosenTileValue);
+        flippedTileArray = [];
+        pickedTileOne = 0;
+        chosenTile.style.visibility = "hidden";
         alert('Great Job!');
+    } else if (chosenTileValue + pickedTileOne < sumOfDice) {  
+        chosenTile.style.visibility = "hidden";
+        alert("Flip more tile.");
+    } else if (chosenTileValue + pickedTileOne > sumOfDice) {  
+        alert("Wrong flip");
     } else if (flippedTileArray.indexOf(chosenTileValue) !== -1) {
         alert('Wrong Flip');
-    } else {
+    } else 
         alert('Wrong Flip!');
-    }
 
 }
-    
-    
 
+
+    
+    
+//flippedTileArray.indexOf(chosenTileValue ) == -1)
     
 
     

@@ -8,6 +8,7 @@ const startPageBtn = document.getElementById("ext-btn");
 const rollDiceBtn = document.getElementById("dice-btn");
 const tiles = Array.from(document.querySelectorAll('.tile'));
 let sumOfDice = 0;
+let flippedTileArray = [];
 
 //Function to hide or unhide homegame screen, game screen and end screen
 function unhideGame() {
@@ -84,10 +85,22 @@ function flipTile(event) {
     let chosenTile = event.target;
     let chosenTileValue = chosenTile.innerHTML;
     
-    console.log(sumOfDice);
-    
-    
+    if (chosenTileValue < sumOfDice && flippedTileArray.indexOf(chosenTileValue ) == -1) {
+        flippedTileArray.push(chosenTileValue)
+        chosenTile.style.backgroundColor = "brown";
+    } else if 
+        (chosenTileValue = sumOfDice && flippedTileArray.indexOf(chosenTileValue ) == -1) {
+        flippedTileArray.push(chosenTileValue)
+        chosenTile.style.backgroundColor = "brown";
+        alert('Great Job!')
+    } else {
+        alert('Wrong Flip!');
+    }
+
 }
+    
+    
+
     
 
     

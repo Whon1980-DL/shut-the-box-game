@@ -84,15 +84,22 @@ tiles.forEach(tile => {
 function flipTile(event) {
     let chosenTile = event.target;
     let chosenTileValue = chosenTile.innerHTML;
+    //let pickedTileOne = 0;
+    //let pickedTileTwo = 0;
+    //let pickedTileThree = 0;
+    //let pickedTileFour = 0;
     
     if (chosenTileValue < sumOfDice && flippedTileArray.indexOf(chosenTileValue ) == -1) {
-        flippedTileArray.push(chosenTileValue)
+        flippedTileArray.push(chosenTileValue);
+        //pickedTileOne = chosenTileValue;
         chosenTile.style.backgroundColor = "brown";
-    } else if 
-        (chosenTileValue = sumOfDice && flippedTileArray.indexOf(chosenTileValue ) == -1) {
-        flippedTileArray.push(chosenTileValue)
+        alert("Flip more tile.");
+    } else if (chosenTileValue = sumOfDice && flippedTileArray.indexOf(chosenTileValue ) == -1) {
+        flippedTileArray.push(chosenTileValue);
         chosenTile.style.backgroundColor = "brown";
-        alert('Great Job!')
+        alert('Great Job!');
+    } else if (flippedTileArray.indexOf(chosenTileValue) !== -1) {
+        alert('Wrong Flip');
     } else {
         alert('Wrong Flip!');
     }

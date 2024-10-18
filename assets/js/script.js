@@ -103,30 +103,27 @@ function flipTile(event) {
         flippedTileArray = [];
         chosenTile.style.visibility = "hidden";
         alert('Great Job!');
+    } else if (chosenTileValue + pickedTileOne < sumOfDice) {  
+        chosenTile.style.visibility = "hidden";
+        alert("Flip more tile.");
+    } else if (chosenTileValue + pickedTileOne > sumOfDice) {  
+        alert("Wrong flip");
     } else if (chosenTileValue + pickedTileOne == sumOfDice)  {
         //flippedTileArray.push(chosenTileValue);
         flippedTileArray = [];
         pickedTileOne = 0;
         chosenTile.style.visibility = "hidden";
         alert('Great Job!');
-    } else if (chosenTileValue + pickedTileOne < sumOfDice) {  
-        chosenTile.style.visibility = "hidden";
-        alert("Flip more tile.");
-    } else if (chosenTileValue + pickedTileOne > sumOfDice) {  
-        alert("Wrong flip");
     } else if (flippedTileArray.indexOf(chosenTileValue) !== -1) {
         alert('Wrong Flip');
     } else 
         alert('Wrong Flip!');
 
-}
+} 
 
-
-    
-    
 //flippedTileArray.indexOf(chosenTileValue ) == -1)
     
-
+    
     
 
 

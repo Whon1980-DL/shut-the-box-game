@@ -78,7 +78,7 @@ section#game-screen {
 }
 
 #rules-btn {
-    margin-top: 70px;
+    margin-top: 40px;
     font-size: 8px;
 }
 
@@ -203,10 +203,12 @@ section#game-screen {
 
 #dice-btn {
     font-size: 8px;
+    margin-top: 20px;
 }
 
 #score-btn {
     font-size: 8px;
+    margin-top: 20px;
 }
 
 #score-display {
@@ -222,6 +224,7 @@ section#game-screen {
 /* media query: mobile phone and tablet (749px and smaller) */
 @media screen and (max-width: 749px) {
 
+    /* Canvas */
     .main-container {
         height: 80vh;
         max-height: 750px;
@@ -234,19 +237,23 @@ section#game-screen {
 
     /* Start page */
     #rules-btn {
-        margin-top: 30;
+        margin-top: 30px;
     }
 
     /* Game page */
+    .tiles-container {
+        margin-top: 60px;
+    }
+
     .tile {
-        height: 90px;
-        width: 45px;
+        height: 100px;
+        width: 50px;
         font-size: 10px;
     }
 
     .dice img {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         margin-left: 10px;
     }
 

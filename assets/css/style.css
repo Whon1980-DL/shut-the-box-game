@@ -137,7 +137,7 @@ section#game-screen {
 
 /* Tiles */
 .tiles-container {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .tile {
@@ -165,7 +165,7 @@ section#game-screen {
     max-width: 50%;
     margin: auto;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .dice img {
@@ -176,9 +176,14 @@ section#game-screen {
 
 /* Game button area */
 .btn-area-container {
+    display: block;
     margin-top: 20px;
 }
 
 #dice-btn {
+    font-size: 8px;
+}
+
+#score-btn {
     font-size: 8px;
 }

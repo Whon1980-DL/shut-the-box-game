@@ -14,8 +14,8 @@ let flippedTileArray = [];
 let tempFlippedTileArray = [];
 let pickedTileOne = 0;
 let pickedTileTwo = 0;
+let pickedTileThree = 0;
 let alertMsg = document.getElementById("alert");
-//let chosenTileValue = 0;
 
 //Function to hide or unhide homegame screen, game screen and end screen
 function unhideGame() {
@@ -70,7 +70,6 @@ function rollTheDice() {
 
     alertMsg.style.display = 'none';
 
-    //console.log(pickedTileOne);
 }
 
 rollDiceBtn.addEventListener('click', rollTheDice);
@@ -79,18 +78,13 @@ function flipTile(event) {
     let chosenTileValue = event;
     console.log(chosenTileValue);
     
-    //let pickedTileThree = 0;
-    //let pickedTileFour = 0;
-    
     if (sumOfDice == 0) {
-        //alert("Please roll the dice!");
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Please roll the dice!";
         chosenTileValue = 0;
         console.log('sumOfDice == 0');
         return;
     } else if (chosenTileValue > sumOfDice && tempFlippedTileArray.length === 0) {  
-        //alert('Wrong flip');
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Wrong flip!";
         console.log('chosenTileValue > sumOfDice');
@@ -99,12 +93,9 @@ function flipTile(event) {
     } else if (chosenTileValue < sumOfDice && tempFlippedTileArray.length === 0) {
         flippedTileArray.push(chosenTileValue); 
         tempFlippedTileArray.push(chosenTileValue);
-        pickedTileOne = flippedTileArray[0];
         pickedTileOne = tempFlippedTileArray[0];
         console.log(pickedTileOne);
-        //chosenTileValue = 0;
         document.getElementById('tile' + event).style.visibility = "hidden";
-        //alert("Flip another tile.");
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Flip another tile!";
         console.log('chosenTileValue < sumOfDice && tempFlippedTileArray.length === 0');
@@ -118,7 +109,6 @@ function flipTile(event) {
         sumOfDice = 0;
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Great job!";
-        //alert('Great Job!');
         console.log('chosenTileValue = sumOfDice');
         console.log(chosenTileValue);
         return;
@@ -140,8 +130,37 @@ function flipTile(event) {
         alertMsg.innerHTML = "Great job!";
         console.log('(chosenTileValue + pickedTileOne + pickedTileTwo) == sumOfDice && tempFlippedTileArray.length === 2');
         return;
+    } else if ((chosenTileValue + pickedTileOne + pickedTileTwo) < sumOfDice && tempFlippedTileArray.length === 2) {  
+        flippedTileArray.push(chosenTileValue);
+        tempFlippedTileArray.push(chosenTileValue);
+        pickedTileThree = tempFlippedTileArray[2];
+        document.getElementById('tile' + event).style.visibility = "hidden";
+        alertMsg.style.display = 'block';
+        alertMsg.innerHTML = "Flip another tile!";
+        console.log('(chosenTileValue + pickedTileOne + pickedTileTwo) == sumOfDice && tempFlippedTileArray.length === 2');
+        return;
+    } else if ((chosenTileValue + pickedTileOne + pickedTileTwo + pickedTileThree) == sumOfDice && tempFlippedTileArray.length === 3) {  
+        flippedTileArray.push(chosenTileValue);
+        tempFlippedTileArray = []
+        document.getElementById('tile' + event).style.visibility = "hidden";
+        alertMsg.style.display = 'block';
+        alertMsg.innerHTML = "Great job!";
+        console.log('(chosenTileValue + pickedTileOne + pickedTileTwo + pickedTileThree) == sumOfDice && tempFlippedTileArray.length === 3');
+        return;
+    } else if ((chosenTileValue + pickedTileOne + pickedTileTwo + pickedTileThree) > sumOfDice && tempFlippedTileArray.length === 3) {  
+        alertMsg.style.display = 'block';
+        alertMsg.innerHTML = "Game Over!";
+        console.log('(chosenTileValue + pickedTileOne + pickedTileTwo + pickedTileThree) > sumOfDice && tempFlippedTileArray.length === 3');
+        return;
+    } else if ((chosenTileValue + pickedTileOne + pickedTileTwo) > sumOfDice && tempFlippedTileArray.length === 2) {  
+        flippedTileArray.push(chosenTileValue);
+        tempFlippedTileArray = []
+        document.getElementById('tile' + event).style.visibility = "hidden";
+        alertMsg.style.display = 'block';
+        alertMsg.innerHTML = "Game Over!";
+        console.log('(chosenTileValue + pickedTileOne + pickedTileTwo) < sumOfDice && tempFlippedTileArray.length === 2');
+        return;
     } else if ((chosenTileValue + pickedTileOne) > sumOfDice) {  
-        //alert("Wrong flip");
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Wrong flip!";
         console.log('chosenTileValue + pickedTileOne) > sumOfDice');
@@ -152,19 +171,16 @@ function flipTile(event) {
         pickedTileOne = 0;
         document.getElementById('tile' + event).style.visibility = "hidden";
         sumOfDice = 0;
-        //alert('Great Job!');
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Great job!";
         console.log('chosenTileValue + pickedTileOne) == sumOfDice');
         return;
     } else if (flippedTileArray.indexOf(chosenTileValue) !== -1) {
-        //alert('Wrong Flip');
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Wrong flip!";
         console.log('flippedTileArray.indexOf(chosenTileValue) !== -1');
         return;
     } else {
-        //alert('Wrong Flip!');
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Wrong flip!";
         console.log('No condition met');

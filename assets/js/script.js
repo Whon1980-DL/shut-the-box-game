@@ -9,7 +9,9 @@ const rollDiceBtn = document.getElementById("dice-btn");
 const tiles = Array.from(document.querySelectorAll('.tile'));
 let sumOfDice = 0;
 let flippedTileArray = [];
+let tempFlippedTileArray = [];
 let pickedTileOne = 0;
+let pickedTileTwo = 0;
 let chosenTileValue = 0;
 
 //Function to hide or unhide homegame screen, game screen and end screen
@@ -57,27 +59,16 @@ function rollTheDice() {
         diceNum1.setAttribute("src","assets/image/game-page-image/dice" + randomNumber1 + ".png");
         diceNum2.setAttribute("src","assets/image/game-page-image/dice" + randomNumber2 + ".png");
 
-        //document.getElementById("dice-1-value").innerHTML = randomNumber1;
-        //document.getElementById("dice-2-value").innerHTML = randomNumber2;
-
         sumOfDice = randomNumber1 + randomNumber2;
         
         return sumOfDice;
 
     }, 2500);
+
+    console.log(pickedTileOne);
 }
 
 rollDiceBtn.addEventListener('click', rollTheDice);
-
-// Set variable for dice value and sum of two dice
-//let diceOne = document.getElementById("dice-1-value");
-//let diceOneValue = diceOne.innerHTML;
-
-//console.log(diceOneValue);
-
-//let diceTwo = document.getElementById("dice-2-value");
-//let diceTwoValue = diceTwo.innerHTML;
-//let sumOfDice = diceOneValue + diceTwoValue;
 
 tiles.forEach(tile => {
     tile.addEventListener('click', flipTile);
@@ -94,45 +85,54 @@ function flipTile(event) {
     if (sumOfDice == 0) {
         alert("Please roll the dice!");
         chosenTileValue = 0;
-        console.log('1');
+        console.log('sumOfDice == 0');
     } else if (chosenTileValue > sumOfDice) {  
-        alert("Wrong flip");
-        console.log('2');
-    } else if (chosenTileValue < sumOfDice && flippedTileArray.length === 0) {
-        flippedTileArray.push(chosenTileValue); 
-        pickedTileOne = flippedTileArray[0];
-        chosenTileValue = 0;
+        alert('Wrong flip');
+        console.log('chosenTileValue > sumOfDice');
+        console.log("sumOfDice == 0");
+    } else if (chosenTileValue < sumOfDice && tempFlippedTileArray.length === 0) {
+        //flippedTileArray.push(chosenTileValue); 
+        tempFlippedTileArray.push(chosenTileValue);
+        pickedTileOne = tempFlippedTileArray[0];
+        console.log(pickedTileOne);
+        //chosenTileValue = 0;
         chosenTile.style.visibility = "hidden";
         alert("Flip more tile.");
-        console.log('3');
+        console.log('chosenTileValue < sumOfDice && tempFlippedTileArray.length === 0');
+        console.log(chosenTileValue);
     } else if (chosenTileValue = sumOfDice)  {
-        //flippedTileArray.push(chosenTileValue);
-        flippedTileArray = [];
+        flippedTileArray.push(chosenTileValue);
+        tempFlippedTileArray = [];
         chosenTile.style.visibility = "hidden";
+        pickedTileOne = 0;
         sumOfDice = 0;
         alert('Great Job!');
-        console.log('4');
+        console.log('chosenTileValue = sumOfDice');
+        console.log(chosenTileValue);
     } else if ((chosenTileValue + pickedTileOne) < sumOfDice) {  
+        flippedTileArray.push(chosenTileValue);
+        tempFlippedTileArray.push(chosenTileValue);
+        pickedTileTwo = tempFlippedTileArray[0];
         chosenTile.style.visibility = "hidden";
         alert("Flip more tile.");
-        console.log('5');
+        console.log('(chosenTileValue + pickedTileOne) < sumOfDice');
     } else if ((chosenTileValue + pickedTileOne) > sumOfDice) {  
         alert("Wrong flip");
-        console.log('6');
+        console.log('chosenTileValue + pickedTileOne) > sumOfDice');
     } else if ((chosenTileValue + pickedTileOne) == sumOfDice) {
-        //flippedTileArray.push(chosenTileValue);
-        flippedTileArray = [];
+        flippedTileArray.push(chosenTileValue);
+        TempFlippedTileArray = [];
         pickedTileOne = 0;
         chosenTile.style.visibility = "hidden";
         sumOfDice = 0;
         alert('Great Job!');
-        console.log('7');
+        console.log('chosenTileValue + pickedTileOne) == sumOfDice');
     } else if (flippedTileArray.indexOf(chosenTileValue) !== -1) {
         alert('Wrong Flip');
-        console.log('8');
+        console.log('flippedTileArray.indexOf(chosenTileValue) !== -1');
     } else 
         alert('Wrong Flip!');
-        console.log('9');
+        console.log('No condition met');
 
 } 
 

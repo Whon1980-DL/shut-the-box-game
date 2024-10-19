@@ -85,6 +85,10 @@ function flipTile(event) {
         chosenTileValue = 0;
         console.log('sumOfDice == 0');
         return;
+    } else if (tempFlippedTileArray.length === 0 && flippedTileArray.length === 9) {  
+        alertMsg.style.display = 'block';
+        alertMsg.innerHTML = "Congratulation! You just shut the box!";
+        return;
     } else if (chosenTileValue > sumOfDice && tempFlippedTileArray.length === 0) {  
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Wrong flip!";

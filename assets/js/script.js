@@ -47,6 +47,8 @@ function showStart() {
 
 startPageBtn.addEventListener('click', showStart);
 
+rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
+
 //Function to roll the dice
 function rollTheDice() {
     let diceNum1 = document.querySelector(".img1");
@@ -68,11 +70,9 @@ function rollTheDice() {
 
     }, 2500);
 
-    alertMsg.style.display = 'none';
+     alertMsg.style.display = 'none';
 
 }
-
-rollDiceBtn.addEventListener('click', rollTheDice);
 
 function flipTile(event) {
     let chosenTileValue = event;
@@ -110,6 +110,7 @@ function flipTile(event) {
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Great job!";
         console.log('chosenTileValue = sumOfDice');
+        rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
         console.log(chosenTileValue);
         return;
     } else if ((chosenTileValue + pickedTileOne) < sumOfDice && tempFlippedTileArray.length === 1) {  
@@ -128,6 +129,7 @@ function flipTile(event) {
         document.getElementById('tile' + event).style.visibility = "hidden";
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Great job!";
+        rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
         console.log('(chosenTileValue + pickedTileOne + pickedTileTwo) == sumOfDice && tempFlippedTileArray.length === 2');
         return;
     } else if ((chosenTileValue + pickedTileOne + pickedTileTwo) < sumOfDice && tempFlippedTileArray.length === 2) {  
@@ -145,6 +147,7 @@ function flipTile(event) {
         document.getElementById('tile' + event).style.visibility = "hidden";
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Great job!";
+        rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
         console.log('(chosenTileValue + pickedTileOne + pickedTileTwo + pickedTileThree) == sumOfDice && tempFlippedTileArray.length === 3');
         return;
     } else if ((chosenTileValue + pickedTileOne + pickedTileTwo + pickedTileThree) > sumOfDice && tempFlippedTileArray.length === 3) {  
@@ -173,6 +176,7 @@ function flipTile(event) {
         sumOfDice = 0;
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Great job!";
+        rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
         console.log('chosenTileValue + pickedTileOne) == sumOfDice');
         return;
     } else if (flippedTileArray.indexOf(chosenTileValue) !== -1) {
@@ -182,7 +186,7 @@ function flipTile(event) {
         return;
     } else {
         alertMsg.style.display = 'block';
-        alertMsg.innerHTML = "Wrong flip!";
+        alertMsg.innerHTML = "Game Over!";
         console.log('No condition met');
     }
 } 

@@ -129,6 +129,10 @@ section#game-screen {
     flex-direction: column;
 }
 
+#alert {
+    display: none;
+}
+
 #ext-btn {
     width: 150px;
     float: left;

@@ -55,17 +55,18 @@
         <div class="main-container uppercase game-canvas">
                 <button type="button" id="ext-btn" class="btn uppercase">Exit game</button></a>
             <div class="game-area">
+                <p id="alert"></p>
                 <div class="tiles-container" id="tiles-box">
-                    <button class="tile" id="tile-one">1</button>
-                    <button class="tile" id="tile-two">2</button>
-                    <button class="tile" id="tile-three">3</button>
-                    <button class="tile" id="tile-four">4</button>
-                    <button class="tile" id="tile-five">5</button>
-                    <button class="tile" id="tile-six">6</button>
-                    <button class="tile" id="tile-seven">7</button>
-                    <button class="tile" id="tile-eight">8</button>
-                    <button class="tile" id="tile-nine">9</button>
-                 </div>
+                    <button class="tile" id="tile-one" onclick="flipTile(1)">1</button>
+                    <button class="tile" id="tile-two" onclick="flipTile(2)">2</button>
+                    <button class="tile" id="tile-three" onclick="flipTile(3)">3</button>
+                    <button class="tile" id="tile-four" onclick="flipTile(4)">4</button>
+                    <button class="tile" id="tile-five" onclick="flipTile(5)">5</button>
+                    <button class="tile" id="tile-six" onclick="flipTile(6)">6</button>
+                    <button class="tile" id="tile-seven" onclick="flipTile(7)">7</button>
+                    <button class="tile" id="tile-eight" onclick="flipTile(8)" >8</button>
+                    <button class="tile" id="tile-nine"onclick="flipTile(9)">9</button>
+                 </div> 
                  <div class="dice-container" id="dice-box">
                     <div class="dice" id="dice-1">
                         <img src="assets/image/game-page-image/dice6.png" alt="Dice with 6 dots" class="img1">

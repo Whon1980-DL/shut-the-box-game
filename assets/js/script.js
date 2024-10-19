@@ -16,6 +16,8 @@ let scoreArray = [];
 let pickedTileOne = 0;
 let pickedTileTwo = 0;
 let pickedTileThree = 0;
+let diceNum1;
+let diceNum2;
 let alertMsg = document.getElementById("alert");
 
 //Function to hide or unhide homegame screen, game screen and end screen
@@ -52,8 +54,8 @@ rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
 
 //Function to roll the dice
 function rollTheDice() {
-    let diceNum1 = document.querySelector(".img1");
-    let diceNum2 = document.querySelector(".img2");
+    diceNum1 = document.querySelector(".img1");
+    diceNum2 = document.querySelector(".img2");
 
     diceNum1.setAttribute("src","assets/image/game-page-image/rolling-dice1.gif");
     diceNum2.setAttribute("src","assets/image/game-page-image/rolling-dice2.gif");
@@ -215,7 +217,33 @@ function calculateScore() {
     
 scoreBtn.addEventListener('click', calculateScore);
     
+function resetGame() {
+    tiles.forEach(tile => {
+        tile.style.visibility = "visible";
+    
+        sumOfDice = 0;
+        flippedTileArray = [];
+        tempFlippedTileArray = [];
+        scoreArray = [];
+        pickedTileOne = 0;
+        pickedTileTwo = 0;
+        pickedTileThree = 0;
 
+        diceNum1.setAttribute("src","assets/image/game-page-image/dice6.png");
+        diceNum2.setAttribute("src","assets/image/game-page-image/dice6.png");
+
+        alertMsg.style.display = 'none';
+        alertMsg.innerHTML = "";
+
+        scoreDisplay.style.display = "none"; 
+        document.getElementById("score-number").innerText = "";
+
+        rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
+    })
+
+return;
+
+}
 
 
 

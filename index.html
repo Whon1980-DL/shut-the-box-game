@@ -53,7 +53,10 @@
    <!-- Game screen area --> 
     <section id="game-screen">
         <div class="main-container uppercase game-canvas">
-                <button type="button" id="ext-btn" class="btn uppercase">Exit game</button></a>
+            <div id="btn-area-top">
+                <button type="button" id="ext-btn" class="btn uppercase">Exit game</button>
+                <button type="button" id="reset-btn" class="btn uppercase" onclick="resetGame()">Reset game</button>
+            </div>
             <div class="game-area">
                 <p id="alert"></p>
                 <div class="tiles-container" id="tiles-box">

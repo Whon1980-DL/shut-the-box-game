@@ -138,9 +138,16 @@ section#game-screen {
     box-sizing: border-box;
 }
 
+/* Top button area */
 #ext-btn {
     width: 150px;
     float: left;
+    font-size: 8px;
+}
+
+#reset-btn {
+    width: 150px;
+    float: right;
     font-size: 8px;
 }
 

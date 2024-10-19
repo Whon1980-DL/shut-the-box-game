@@ -138,7 +138,7 @@ function flipTile(event) {
         document.getElementById('tile' + event).style.visibility = "hidden";
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Great job!";
-        console.log('(chosenTileValue + pickedTileOne) < sumOfDice');
+        console.log('(chosenTileValue + pickedTileOne + pickedTileTwo) == sumOfDice && tempFlippedTileArray.length === 2');
         return;
     } else if ((chosenTileValue + pickedTileOne) > sumOfDice) {  
         //alert("Wrong flip");

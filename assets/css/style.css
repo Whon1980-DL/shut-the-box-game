@@ -219,3 +219,50 @@ section#game-screen {
     margin-top: 15px;
 }
 
+/* media query: mobile phone and tablet (749px and smaller) */
+@media screen and (max-width: 749px) {
+
+    .main-container {
+        height: 80vh;
+        max-height: 750px;
+        max-width: 830px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1%;
+        text-align: center;
+    }
+
+    /* Start page */
+    #rules-btn {
+        margin-top: 30;
+    }
+
+    /* Game page */
+    .tile {
+        height: 90px;
+        width: 45px;
+        font-size: 10px;
+    }
+
+    .dice img {
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+    }
+
+    #ext-btn {
+    height: 20px;
+    width: 100px;
+    padding: 5px;
+    border: 1px dashed cornsilk;
+    font-size: 5px;
+    }
+
+    #reset-btn {
+    height: 20px;
+    width: 100px;
+    padding: 5px;
+    border: 1px dashed cornsilk;
+    font-size: 5px;
+    }
+}

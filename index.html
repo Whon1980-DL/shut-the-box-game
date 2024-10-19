@@ -19,11 +19,11 @@
             <div class="game-start-container" id="start">
                 <h1 id="start-msg">Start game</h1>
                 <div class="launch-btn-container" id="launch-btn">
-                    <button type="button" id="two-p-btn" class="choice-btn uppercase">2 Players</button>
-                    <button type="button" id="vs-com-btn" class="choice-btn uppercase">vs computer</button>
+                    <button type="button" id="two-p-btn" class="choice-btn uppercase hover">2 Players</button>
+                    <button type="button" id="vs-com-btn" class="choice-btn uppercase hover">vs computer</button>
                 </div>
             </div>
-            <button type="button" id="rules-btn" class="btn" onclick="showRules()">How to play</button>
+            <button type="button" id="rules-btn" class="btn hover" onclick="showRules()">How to play</button>
             <div id="game-rules" class="rules">
                 <div class="rules-content">
                     <span class="close" onclick="closeModal()">&times;</span>
@@ -54,8 +54,8 @@
     <section id="game-screen">
         <div class="main-container uppercase game-canvas">
             <div id="btn-area-top">
-                <button type="button" id="ext-btn" class="btn uppercase">Exit game</button>
-                <button type="button" id="reset-btn" class="btn uppercase" onclick="resetGame()">Reset game</button>
+                <button type="button" id="ext-btn" class="btn uppercase hover">Exit game</button>
+                <button type="button" id="reset-btn" class="btn uppercase hover" onclick="resetGame()">Reset game</button>
             </div>
             <div class="game-area">
                 <p id="alert"></p>
@@ -79,8 +79,8 @@
                     </div>
                 </div>
                 <div class="btn-area-container">
-                    <button type="button" class="btn" id="dice-btn">Roll The Dice</button>
-                    <button type="button" class="btn" id="score-btn">Calculate Score</button>
+                    <button type="button" class="btn hover" id="dice-btn">Roll The Dice</button>
+                    <button type="button" class="btn hover" id="score-btn">Calculate Score</button>
                     <p id="score-display">Your score is: <span id="score-number">0</span></p>
                 </div>
             </div>

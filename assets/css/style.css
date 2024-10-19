@@ -19,6 +19,11 @@ body {
     display: none;
 }
 
+.hover:hover {
+    background-color: cornsilk;
+    color: brown;
+}
+
 .main-container {
     background-image: url(../image/retro-bg.jpg);
     background-position: center;

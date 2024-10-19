@@ -76,7 +76,6 @@ function rollTheDice() {
 rollDiceBtn.addEventListener('click', rollTheDice);
 
 function flipTile(event) {
-    //let chosenTile = event.target
     let chosenTileValue = event;
     console.log(chosenTileValue);
     
@@ -99,12 +98,13 @@ function flipTile(event) {
         console.log("sumOfDice == 0");
         return;
     } else if (chosenTileValue < sumOfDice && tempFlippedTileArray.length === 0) {
-        //flippedTileArray.push(chosenTileValue); 
+        flippedTileArray.push(chosenTileValue); 
         tempFlippedTileArray.push(chosenTileValue);
+        pickedTileOne = flippedTileArray[0];
         pickedTileOne = tempFlippedTileArray[0];
         console.log(pickedTileOne);
         //chosenTileValue = 0;
-        //chosenTile.style.visibility = "hidden";
+        document.getElementById('tile' + event).style.visibility = "hidden";
         //alert("Flip another tile.");
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Flip another tile!";
@@ -114,23 +114,23 @@ function flipTile(event) {
     } else if (chosenTileValue == sumOfDice && tempFlippedTileArray.length === 0)  {
         flippedTileArray.push(chosenTileValue);
         tempFlippedTileArray = [];
-        //chosenTile.style.visibility = "hidden";
+        document.getElementById('tile' + event).style.visibility = "hidden";
         pickedTileOne = 0;
         sumOfDice = 0;
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Great job!";
-        alert('Great Job!');
+        //alert('Great Job!');
         console.log('chosenTileValue = sumOfDice');
         console.log(chosenTileValue);
         return;
     } else if ((chosenTileValue + pickedTileOne) < sumOfDice) {  
-        flippedTileArray.push(chosenTileValue);
+        //flippedTileArray.push(chosenTileValue);
         tempFlippedTileArray.push(chosenTileValue);
         //pickedTileTwo = tempFlippedTileArray[0];
-        //chosenTile.style.visibility = "hidden";
+        //document.getElementById('tile' + event).style.visibility = "hidden";
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Game over: wrong move was made!";
-        alert("Flip more tile.");
+        //alert("Flip more tile.");
         console.log('(chosenTileValue + pickedTileOne) < sumOfDice');
         return;
     } else if ((chosenTileValue + pickedTileOne) > sumOfDice) {  
@@ -143,7 +143,7 @@ function flipTile(event) {
         flippedTileArray.push(chosenTileValue);
         tempFlippedTileArray = [];
         pickedTileOne = 0;
-        //chosenTile.style.visibility = "hidden";
+        document.getElementById('tile' + event).style.visibility = "hidden";
         sumOfDice = 0;
         //alert('Great Job!');
         alertMsg.style.display = 'block';

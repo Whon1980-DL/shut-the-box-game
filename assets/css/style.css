@@ -129,8 +129,13 @@ section#game-screen {
     flex-direction: column;
 }
 
+/* Alert message */
+
 #alert {
     display: none;
+    font-size: 10px;
+    color: gold;
+    box-sizing: border-box;
 }
 
 #ext-btn {
@@ -169,7 +174,7 @@ section#game-screen {
     max-width: 50%;
     margin: auto;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .dice img {
@@ -181,7 +186,7 @@ section#game-screen {
 /* Game button area */
 .btn-area-container {
     display: block;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 #dice-btn {
@@ -194,4 +199,10 @@ section#game-screen {
 
 #score-display {
     display: none;
+    font-size: 10px;
+    color: brown;
+    background-color: cornsilk;
+    max-width: 30%;
+    margin: auto;
+    margin-top: 15px;
 }

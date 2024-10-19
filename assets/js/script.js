@@ -7,6 +7,8 @@ const close = document.getElementsByClassName("close")[0];
 const startPageBtn = document.getElementById("ext-btn");
 const rollDiceBtn = document.getElementById("dice-btn");
 const tiles = Array.from(document.querySelectorAll('.tile'));
+const scoreBtn = document.getElementById("score-btn");
+let scoreDisplay = document.getElementById("score-display");
 let sumOfDice = 0;
 let flippedTileArray = [];
 let tempFlippedTileArray = [];
@@ -136,9 +138,17 @@ function flipTile(event) {
 
 } 
 
-//flippedTileArray.indexOf(chosenTileValue ) == -1)
+function calculateScore() {
+    let sumOfChosenTile = 0;
+    for (let i = 0; i < flippedTileArray.length; i++) {
+        sumOfChosenTile += flippedTileArray[i];
+    }
+    let displayScore = 45 - sumOfChosenTile;
+    scoreDisplay.style.display = "block"; 
+    document.getElementById("score-number").innerText = displayScore;
+}
     
-    
+scoreBtn.addEventListener('click', calculateScore);
     
 
 

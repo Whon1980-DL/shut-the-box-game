@@ -187,3 +187,7 @@ section#game-screen {
 #score-btn {
     font-size: 8px;
 }
+
+#score-display {
+    display: none;
+}

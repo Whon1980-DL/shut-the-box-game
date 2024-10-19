@@ -12,6 +12,7 @@ let scoreDisplay = document.getElementById("score-display");
 let sumOfDice = 0;
 let flippedTileArray = [];
 let tempFlippedTileArray = [];
+let scoreArray = [];
 let pickedTileOne = 0;
 let pickedTileTwo = 0;
 let pickedTileThree = 0;
@@ -104,6 +105,7 @@ function flipTile(event) {
     } else if (chosenTileValue == sumOfDice && tempFlippedTileArray.length === 0)  {
         flippedTileArray.push(chosenTileValue);
         tempFlippedTileArray = [];
+        scoreArray.push(sumOfDice);
         document.getElementById('tile' + event).style.visibility = "hidden";
         pickedTileOne = 0;
         sumOfDice = 0;
@@ -126,6 +128,7 @@ function flipTile(event) {
     } else if ((chosenTileValue + pickedTileOne + pickedTileTwo) == sumOfDice && tempFlippedTileArray.length === 2) {  
         flippedTileArray.push(chosenTileValue);
         tempFlippedTileArray = []
+        scoreArray.push(sumOfDice);
         document.getElementById('tile' + event).style.visibility = "hidden";
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Great job!";
@@ -143,6 +146,7 @@ function flipTile(event) {
         return;
     } else if ((chosenTileValue + pickedTileOne + pickedTileTwo + pickedTileThree) == sumOfDice && tempFlippedTileArray.length === 3) {  
         flippedTileArray.push(chosenTileValue);
+        scoreArray.push(sumOfDice);
         tempFlippedTileArray = []
         document.getElementById('tile' + event).style.visibility = "hidden";
         alertMsg.style.display = 'block';
@@ -171,6 +175,7 @@ function flipTile(event) {
     } else if ((chosenTileValue + pickedTileOne) == sumOfDice) {
         flippedTileArray.push(chosenTileValue);
         tempFlippedTileArray = [];
+        scoreArray.push(sumOfDice);
         pickedTileOne = 0;
         document.getElementById('tile' + event).style.visibility = "hidden";
         sumOfDice = 0;
@@ -193,8 +198,8 @@ function flipTile(event) {
 
 function calculateScore() {
     let sumOfChosenTile = 0;
-    for (let i = 0; i < flippedTileArray.length; i++) {
-        sumOfChosenTile += flippedTileArray[i];
+    for (let i = 0; i < scoreArray.length; i++) {
+        sumOfChosenTile += scoreArray[i];
     }
     let displayScore = 45 - sumOfChosenTile;
     scoreDisplay.style.display = "block"; 

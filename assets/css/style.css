@@ -308,4 +308,8 @@ section#game-screen {
         background-color: brown;
         margin-top: 15px;
     }
+
+    .hover:hover {
+        color: cornsilk;
+    }
 }

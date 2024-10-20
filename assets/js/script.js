@@ -103,7 +103,7 @@ function flipTile(event) {
         console.log('chosenTileValue > sumOfDice');
         console.log("sumOfDice == 0");
         return;
-    } else if (chosenTileValue < sumOfDice && tempFlippedTileArray.length === 0 && flippedTileArray > 6) {
+    } else if (chosenTileValue < sumOfDice && tempFlippedTileArray.length === 0 && flippedTileArray > 7) {
         pickedTileOne = tempFlippedTileArray[0];
         console.log(pickedTileOne);
         document.getElementById('tile' + event).style.backgroundColor = "brown";

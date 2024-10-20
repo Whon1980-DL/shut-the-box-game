@@ -3,10 +3,8 @@
  */
 const home = document.getElementById("start-screen");
 const game = document.getElementById("game-screen");
-const end = document.getElementById("end-screen"); 
-const gamePageBtn = document.getElementsByClassName('choice-btn')[0];
+const gamePageBtn = document.getElementById("start-game")
 const modal = document.getElementById("game-rules");
-const close = document.getElementsByClassName("close")[0];
 const startPageBtn = document.getElementById("ext-btn");
 const rollDiceBtn = document.getElementById("dice-btn");
 const tiles = Array.from(document.querySelectorAll('.tile'));
@@ -26,7 +24,7 @@ let diceNum2;
 /**
  * Function to hide or unhide homegame screen and game screen by adding event listener to game button
  */
-function unhideGame() {
+function unhideGame() {    
     home.style.display = "none";
     game.style.display = "block";
 }
@@ -375,8 +373,8 @@ function resetGame() {
 
     tiles.forEach(tile => {
         tile.style.visibility = "visible";
-        tile.style.backgroundColor = "cornsilk"
-        tile.style.color = "brown"
+        tile.style.backgroundColor = "cornsilk";
+        tile.style.color = "brown";
     
         sumOfDice = 0;
         flippedTileArray = [];
@@ -396,7 +394,7 @@ function resetGame() {
         document.getElementById("score-number").innerText = "";
 
         rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
-    })
+    });
 
 return;
 

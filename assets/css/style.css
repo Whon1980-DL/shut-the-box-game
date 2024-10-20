@@ -249,7 +249,6 @@ section#game-screen {
     .tile {
         height: 100px;
         width: 50px;
-        font-size: 10px;
     }
 
     /* Top button area */

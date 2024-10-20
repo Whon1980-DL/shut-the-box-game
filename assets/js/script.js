@@ -127,7 +127,7 @@ function flipTile(event) {
         alertMsg.innerHTML = "Wrong flip!";
         console.log('chosenTileValue + pickedTileOne) > sumOfDice');
         return;
-    } else if ((chosenTileValue + pickedTileOne) < sumOfDice && tempFlippedTileArray.length === 1) {  
+    } else if ((chosenTileValue + pickedTileOne) < sumOfDice && tempFlippedTileArray.length === 1 && chosenTileValue !== pickedTileOne) {  
         flippedTileArray.push(chosenTileValue);
         tempFlippedTileArray.push(chosenTileValue);
         pickedTileTwo = tempFlippedTileArray[1];
@@ -138,7 +138,7 @@ function flipTile(event) {
         alertMsg.innerHTML = "Flip another tile!";
         console.log('(chosenTileValue + pickedTileOne) < sumOfDice');
         return;
-    } else if ((chosenTileValue + pickedTileOne) == sumOfDice) {
+    } else if ((chosenTileValue + pickedTileOne) == sumOfDice && chosenTileValue !== pickedTileOne) {
         flippedTileArray.push(chosenTileValue);
         tempFlippedTileArray = [];
         scoreArray.push(sumOfDice);
@@ -151,7 +151,7 @@ function flipTile(event) {
         rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
         console.log('chosenTileValue + pickedTileOne) == sumOfDice');
         return;
-    } else if ((chosenTileValue + pickedTileOne + pickedTileTwo) > sumOfDice && tempFlippedTileArray.length === 2) {  
+    } else if ((chosenTileValue + pickedTileOne + pickedTileTwo) > sumOfDice && tempFlippedTileArray.length === 2 && chosenTileValue !== pickedTileOne && chosenTileValue !== pickedTileTwo) {  
         flippedTileArray.push(chosenTileValue);
         tempFlippedTileArray = []
         document.getElementById('tile' + event).style.backgroundColor = "brown";
@@ -160,7 +160,7 @@ function flipTile(event) {
         alertMsg.innerHTML = "Game Over!";
         console.log('(chosenTileValue + pickedTileOne + pickedTileTwo) > sumOfDice && tempFlippedTileArray.length === 2');
         return;
-    } else if ((chosenTileValue + pickedTileOne + pickedTileTwo) < sumOfDice && tempFlippedTileArray.length === 2) {  
+    } else if ((chosenTileValue + pickedTileOne + pickedTileTwo) < sumOfDice && tempFlippedTileArray.length === 2 && chosenTileValue !== pickedTileOne && chosenTileValue !== pickedTileTwo) {  
         flippedTileArray.push(chosenTileValue);
         tempFlippedTileArray.push(chosenTileValue);
         pickedTileThree = tempFlippedTileArray[2];
@@ -170,7 +170,7 @@ function flipTile(event) {
         alertMsg.innerHTML = "Flip another tile!";
         console.log('(chosenTileValue + pickedTileOne + pickedTileTwo) < sumOfDice && tempFlippedTileArray.length === 2');
         return; 
-    } else if ((chosenTileValue + pickedTileOne + pickedTileTwo) == sumOfDice && tempFlippedTileArray.length === 2) {  
+    } else if ((chosenTileValue + pickedTileOne + pickedTileTwo) == sumOfDice && tempFlippedTileArray.length === 2 && chosenTileValue !== pickedTileOne && chosenTileValue !== pickedTileTwo) {  
         flippedTileArray.push(chosenTileValue);
         tempFlippedTileArray = []
         scoreArray.push(sumOfDice);
@@ -182,14 +182,14 @@ function flipTile(event) {
         rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
         console.log('(chosenTileValue + pickedTileOne + pickedTileTwo) == sumOfDice && tempFlippedTileArray.length === 2');
         return;
-    } else if ((chosenTileValue + pickedTileOne + pickedTileTwo + pickedTileThree) > sumOfDice && tempFlippedTileArray.length === 3) {  
+    } else if ((chosenTileValue + pickedTileOne + pickedTileTwo + pickedTileThree) > sumOfDice && tempFlippedTileArray.length === 3 && chosenTileValue !== pickedTileOne && chosenTileValue !== pickedTileTwo && chosenTileValue !== pickedTileThree) {  
         document.getElementById('tile' + event).style.backgroundColor = "brown";
         document.getElementById('tile' + event).style.color = "cornsilk";
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Game Over!";
         console.log('(chosenTileValue + pickedTileOne + pickedTileTwo + pickedTileThree) > sumOfDice && tempFlippedTileArray.length === 3');
         return;
-    } else if ((chosenTileValue + pickedTileOne + pickedTileTwo + pickedTileThree) == sumOfDice && tempFlippedTileArray.length === 3) {  
+    } else if ((chosenTileValue + pickedTileOne + pickedTileTwo + pickedTileThree) == sumOfDice && tempFlippedTileArray.length === 3 && chosenTileValue !== pickedTileOne && chosenTileValue !== pickedTileTwo && chosenTileValue !== pickedTileThree) {  
         flippedTileArray.push(chosenTileValue);
         scoreArray.push(sumOfDice);
         tempFlippedTileArray = []

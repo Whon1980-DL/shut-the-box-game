@@ -277,7 +277,7 @@ section#game-screen {
 
     /* Score area */
     #score-display {
-        max-width: none;
+        max-width: 70%;
     }
 
 }

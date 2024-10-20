@@ -76,7 +76,9 @@ function rollTheDice() {
         let randomNumber2 = Math.floor(Math.random() * 6) + 1;
 
         diceNum1.setAttribute("src","assets/image/game-page-image/dice" + randomNumber1 + ".png");
+        diceNum1.setAttribute("alt","Dice with" + randomNumber1 + "dots");
         diceNum2.setAttribute("src","assets/image/game-page-image/dice" + randomNumber2 + ".png");
+        diceNum2.setAttribute("alt","Dice with" + randomNumber2 + "dots");
 
         sumOfDice = randomNumber1 + randomNumber2;
         

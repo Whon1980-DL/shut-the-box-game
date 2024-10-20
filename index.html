@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <title>Shut The Box Game</title>
 </head>
+
 <body>
     <!-- Start screen area -->
     <section id="start-screen">
@@ -26,12 +28,13 @@
             <div id="game-rules" class="rules">
                 <div class="rules-content">
                     <span class="close" onclick="closeModal()">&times;</span>
-                    <h3>How To Play<h3>
+                    <p>How To Play</p>
                     <div>
-                        <p>To start, a player roll the dice by clicking the Roll The Dice button then add up the total of their roll. 
-                        They then lower 1 or more tiles that equal the total they rolled. For example, 
-                        if a player rolled a 4 and a 3, their total is 7. 
-                        Therefore, they could choose to lower one of the following tile combinations:
+                        <p>To start, a player roll the dice by clicking the Roll The Dice button then add up the total
+                            of their roll.
+                            They then lower 1 or more tiles that equal the total they rolled. For example,
+                            if a player rolled a 4 and a 3, their total is 7.
+                            Therefore, they could choose to lower one of the following tile combinations:
                         </p>
                         <ul>
                             <li>7</li>
@@ -40,23 +43,30 @@
                             <li>6 & 1</li>
                             <li>4, 2 & 1</li>
                         </ul>
-                        <p>After lowering the tile(s), the player continues to roll the dice and lower tiles until they reach the point where no tiles correspond with the total they roll. For 
-                        example, if the total of a player’s roll is 6 and only the 7 and 2 tiles remain upright, they’re unable to lower any tiles and their turn is over. 
-                        Once a player’s turn is over, the next player starts their turn with all of the tiles in the upright position. This continues until each player has taken one turn.
+                        <p>After lowering the tile(s), the player continues to roll the dice and lower tiles until they
+                            reach the point where no tiles correspond with the total they roll. For
+                            example, if the total of a player’s roll is 6 and only the 7 and 2 tiles remain upright,
+                            they’re unable to lower any tiles and their turn is over.
+                            Once a player’s turn is over, the next player starts their turn with all of the tiles in the
+                            upright position. This continues until each player has taken one turn.
                         </p>
-                        <p>Players add the total of any upright tiles at the end of their turn to their score. The player with the lowest score wins!</p>
-                        <p>If a player manages to lower all of the tiles on their turn, they “shut the box” and automatically win the game!</p>
+                        <p>Players add the total of any upright tiles at the end of their turn to their score. The
+                            player with the lowest score wins!</p>
+                        <p>If a player manages to lower all of the tiles on their turn, they “shut the box” and
+                            automatically win the game!</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-   <!-- Game screen area --> 
+    <!-- Game screen area -->
     <section id="game-screen">
+        <h2 class="hide ">Game Area</h2>
         <div class="main-container uppercase game-canvas">
             <div id="btn-area-top">
                 <button type="button" id="ext-btn" class="btn uppercase hover">Exit game</button>
-                <button type="button" id="reset-btn" class="btn uppercase hover" onclick="resetGame()">Reset game</button>
+                <button type="button" id="reset-btn" class="btn uppercase hover" onclick="resetGame()">Reset
+                    game</button>
             </div>
             <div class="game-area">
                 <p id="alert"></p>
@@ -68,10 +78,10 @@
                     <button class="tile" id="tile5" onclick="flipTile(5)">5</button>
                     <button class="tile" id="tile6" onclick="flipTile(6)">6</button>
                     <button class="tile" id="tile7" onclick="flipTile(7)">7</button>
-                    <button class="tile" id="tile8" onclick="flipTile(8)" >8</button>
-                    <button class="tile" id="tile9"onclick="flipTile(9)">9</button>
-                 </div> 
-                 <div class="dice-container" id="dice-box">
+                    <button class="tile" id="tile8" onclick="flipTile(8)">8</button>
+                    <button class="tile" id="tile9" onclick="flipTile(9)">9</button>
+                </div>
+                <div class="dice-container" id="dice-box">
                     <div class="dice" id="dice-1">
                         <img src="assets/image/game-page-image/dice6.png" alt="Dice with 6 dots" class="img1">
                     </div>
@@ -89,4 +99,5 @@
     </section>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

@@ -103,6 +103,20 @@ function flipTile(event) {
         console.log('chosenTileValue > sumOfDice');
         console.log("sumOfDice == 0");
         return;
+    } else if (chosenTileValue < sumOfDice && tempFlippedTileArray.length === 0 && flippedTileArray > 6) {
+        pickedTileOne = tempFlippedTileArray[0];
+        console.log(pickedTileOne);
+        document.getElementById('tile' + event).style.backgroundColor = "brown";
+        document.getElementById('tile' + event).style.color = "cornsilk";
+        alertMsg.style.display = 'block';
+        alertMsg.innerHTML = "Game Over!";
+        tiles.forEach(tile => {
+            tile.removeAttribute("onclick");
+        })
+        calculateScore();
+        console.log('chosenTileValue < sumOfDice && tempFlippedTileArray.length === 0');
+        console.log(chosenTileValue);
+        return;
     } else if (chosenTileValue < sumOfDice && tempFlippedTileArray.length === 0) {
         flippedTileArray.push(chosenTileValue); 
         tempFlippedTileArray.push(chosenTileValue);
@@ -193,7 +207,6 @@ function flipTile(event) {
         console.log('chosenTileValue + pickedTileOne) == sumOfDice');
         return;
     } else if ((chosenTileValue + pickedTileOne + pickedTileTwo) > sumOfDice && tempFlippedTileArray.length === 2 && chosenTileValue !== pickedTileOne && chosenTileValue !== pickedTileTwo) {  
-        flippedTileArray.push(chosenTileValue);
         tempFlippedTileArray = []
         document.getElementById('tile' + event).style.backgroundColor = "brown";
         document.getElementById('tile' + event).style.color = "cornsilk";
@@ -206,8 +219,6 @@ function flipTile(event) {
         console.log('(chosenTileValue + pickedTileOne + pickedTileTwo) > sumOfDice && tempFlippedTileArray.length === 2');
         return;
     } else if ((chosenTileValue + pickedTileOne + pickedTileTwo) < sumOfDice && tempFlippedTileArray.length === 2 && chosenTileValue !== pickedTileOne && chosenTileValue !== pickedTileTwo && flippedTileArray > 7) {  
-        flippedTileArray.push(chosenTileValue);
-        tempFlippedTileArray.push(chosenTileValue);
         pickedTileThree = tempFlippedTileArray[2];
         document.getElementById('tile' + event).style.backgroundColor = "brown";
         document.getElementById('tile' + event).style.color = "cornsilk";

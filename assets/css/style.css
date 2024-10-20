@@ -282,8 +282,8 @@ section#game-screen {
 
 }
 
-/* media query: mobile phone and tablet (375px and smaller) */
-@media screen and (max-width: 375px) {
+/* media query: mobile phone and tablet (390px and smaller) */
+@media screen and (max-width: 390px) {
     /* Global style */
     .main-container {
         height: 95vh;

@@ -1,3 +1,6 @@
+/**
+ * Declare constants for DOM elements and variables for array
+ */
 const home = document.getElementById("start-screen");
 const game = document.getElementById("game-screen");
 const end = document.getElementById("end-screen"); 
@@ -20,7 +23,9 @@ let pickedTileThree = 0;
 let diceNum1;
 let diceNum2;
 
-//Function to hide or unhide homegame screen, game screen and end screen
+/**
+ * Function to hide or unhide homegame screen and game screen by adding event listener to game button
+ */
 function unhideGame() {
     home.style.display = "none";
     game.style.display = "block";
@@ -28,7 +33,9 @@ function unhideGame() {
 
 gamePageBtn.addEventListener('click', unhideGame);
 
-//Function to set game rules box as modal box
+/**
+ * Function to set game rules box as modal box which activate using onclick attribute
+ */
 function showRules() {
     modal.style.display = "block";
 }
@@ -43,6 +50,9 @@ window.onclick = function(event) {
     }
 }
 
+/**
+ * Function to hide and show start and game button so only one display at one time using add event listener
+ */
 function showStart() {
     home.style.display = "block";
     game.style.display = "none";
@@ -50,9 +60,12 @@ function showStart() {
 
 startPageBtn.addEventListener('click', showStart);
 
+/**
+ * Funciton to roll dice by using random number function and attach numbers to src attribute setting. A
+ * dd event listener method is used. Timne out is set so funciton finish executing after 2,500ms
+ */
 rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
 
-//Function to roll the dice
 function rollTheDice() {
     diceNum1 = document.querySelector(".img1");
     diceNum2 = document.querySelector(".img2");
@@ -77,6 +90,10 @@ function rollTheDice() {
 
 }
 
+/**
+ * Function to allow player to flip tiles. Onclick method is used for accuracy. if-else statements are set to meet each senario. 
+ * The funciton takes one parameter which is the event from the click. Some if-else sstatement activate the calculateScore funciton
+ */
 function flipTile(event) {
     let chosenTileValue = event;
     console.log(chosenTileValue);
@@ -323,6 +340,10 @@ function flipTile(event) {
     }
 } 
 
+/**
+ * Function to calculate score once game over or player can no longer flip any tiles. 
+ * The score is display in a hidden p element which then unvealed.
+ */
 function calculateScore() {
     let sumOfChosenTile = 0;
     for (let i = 0; i < scoreArray.length; i++) {
@@ -335,7 +356,10 @@ function calculateScore() {
     alertMsg.style.display = 'block';
     alertMsg.innerHTML = "Game Over!";
 }
-    
+
+/**
+ * Function to reset the game page. This help reset global variables to their original values.
+ */
 scoreBtn.addEventListener('click', calculateScore);
     
 function resetGame() {

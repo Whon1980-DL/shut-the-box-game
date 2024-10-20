@@ -87,6 +87,12 @@ function flipTile(event) {
         chosenTileValue = 0;
         console.log('sumOfDice == 0');
         return;
+    } else if (chosenTileValue > sumOfDice && tempFlippedTileArray.length === 0 && flippedTileArray.length > 5) {  
+        alertMsg.style.display = 'block';
+        alertMsg.innerHTML = "Game Over!";
+        console.log('chosenTileValue > sumOfDice');
+        console.log("sumOfDice == 0");
+        return;
     } else if (chosenTileValue > sumOfDice && tempFlippedTileArray.length === 0) {  
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Wrong flip!";
@@ -130,6 +136,11 @@ function flipTile(event) {
         console.log('chosenTileValue = sumOfDice');
         rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
         console.log(chosenTileValue);
+        return;
+    } else if ((chosenTileValue + pickedTileOne) > sumOfDice && flippedTileArray.length > 4) {  
+        alertMsg.style.display = 'block';
+        alertMsg.innerHTML = "Game Over!";
+        console.log('chosenTileValue + pickedTileOne) > sumOfDice');
         return;
     } else if ((chosenTileValue + pickedTileOne) > sumOfDice) {  
         alertMsg.style.display = 'block';
@@ -181,6 +192,16 @@ function flipTile(event) {
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Game Over!";
         console.log('(chosenTileValue + pickedTileOne + pickedTileTwo) > sumOfDice && tempFlippedTileArray.length === 2');
+        return;
+    } else if ((chosenTileValue + pickedTileOne + pickedTileTwo) < sumOfDice && tempFlippedTileArray.length === 2 && chosenTileValue !== pickedTileOne && chosenTileValue !== pickedTileTwo && flippedTileArray > 7) {  
+        flippedTileArray.push(chosenTileValue);
+        tempFlippedTileArray.push(chosenTileValue);
+        pickedTileThree = tempFlippedTileArray[2];
+        document.getElementById('tile' + event).style.backgroundColor = "brown";
+        document.getElementById('tile' + event).style.color = "cornsilk";
+        alertMsg.style.display = 'block';
+        alertMsg.innerHTML = "Game Over!";
+        console.log('(chosenTileValue + pickedTileOne + pickedTileTwo) < sumOfDice && tempFlippedTileArray.length === 2');
         return;
     } else if ((chosenTileValue + pickedTileOne + pickedTileTwo) < sumOfDice && tempFlippedTileArray.length === 2 && chosenTileValue !== pickedTileOne && chosenTileValue !== pickedTileTwo) {  
         flippedTileArray.push(chosenTileValue);

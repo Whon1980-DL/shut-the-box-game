@@ -8,6 +8,7 @@ const startPageBtn = document.getElementById("ext-btn");
 const rollDiceBtn = document.getElementById("dice-btn");
 const tiles = Array.from(document.querySelectorAll('.tile'));
 const scoreBtn = document.getElementById("score-btn");
+let alertMsg = document.getElementById("alert");
 let scoreDisplay = document.getElementById("score-display");
 let sumOfDice = 0;
 let flippedTileArray = [];
@@ -18,7 +19,6 @@ let pickedTileTwo = 0;
 let pickedTileThree = 0;
 let diceNum1;
 let diceNum2;
-let alertMsg = document.getElementById("alert");
 
 //Function to hide or unhide homegame screen, game screen and end screen
 function unhideGame() {
@@ -90,6 +90,10 @@ function flipTile(event) {
     } else if (chosenTileValue > sumOfDice && tempFlippedTileArray.length === 0 && flippedTileArray.length > 5) {  
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Game Over!";
+        calculateScore();
+        tiles.forEach(tile => {
+            tile.removeAttribute("onclick");
+        })
         console.log('chosenTileValue > sumOfDice');
         console.log("sumOfDice == 0");
         return;
@@ -140,6 +144,10 @@ function flipTile(event) {
     } else if ((chosenTileValue + pickedTileOne) > sumOfDice && flippedTileArray.length > 4) {  
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Game Over!";
+        tiles.forEach(tile => {
+            tile.removeAttribute("onclick");
+        })
+        calculateScore();
         console.log('chosenTileValue + pickedTileOne) > sumOfDice');
         return;
     } else if ((chosenTileValue + pickedTileOne) > sumOfDice) {  
@@ -191,6 +199,10 @@ function flipTile(event) {
         document.getElementById('tile' + event).style.color = "cornsilk";
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Game Over!";
+        tiles.forEach(tile => {
+            tile.removeAttribute("onclick");
+        })
+        calculateScore();
         console.log('(chosenTileValue + pickedTileOne + pickedTileTwo) > sumOfDice && tempFlippedTileArray.length === 2');
         return;
     } else if ((chosenTileValue + pickedTileOne + pickedTileTwo) < sumOfDice && tempFlippedTileArray.length === 2 && chosenTileValue !== pickedTileOne && chosenTileValue !== pickedTileTwo && flippedTileArray > 7) {  
@@ -201,6 +213,10 @@ function flipTile(event) {
         document.getElementById('tile' + event).style.color = "cornsilk";
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Game Over!";
+        tiles.forEach(tile => {
+            tile.removeAttribute("onclick");
+        })
+        calculateScore();
         console.log('(chosenTileValue + pickedTileOne + pickedTileTwo) < sumOfDice && tempFlippedTileArray.length === 2');
         return;
     } else if ((chosenTileValue + pickedTileOne + pickedTileTwo) < sumOfDice && tempFlippedTileArray.length === 2 && chosenTileValue !== pickedTileOne && chosenTileValue !== pickedTileTwo) {  
@@ -242,6 +258,10 @@ function flipTile(event) {
         document.getElementById('tile' + event).style.color = "cornsilk";
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Game Over!";
+        tiles.forEach(tile => {
+            tile.removeAttribute("onclick");
+        })
+        calculateScore();
         console.log('(chosenTileValue + pickedTileOne + pickedTileTwo + pickedTileThree) > sumOfDice && tempFlippedTileArray.length === 3');
         return;
     } else if ((chosenTileValue + pickedTileOne + pickedTileTwo + pickedTileThree) == sumOfDice && tempFlippedTileArray.length === 3 && chosenTileValue !== pickedTileOne && chosenTileValue !== pickedTileTwo && chosenTileValue !== pickedTileThree && flippedTileArray.length !== 8) {  
@@ -278,6 +298,10 @@ function flipTile(event) {
     } else {
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Game Over!";
+        tiles.forEach(tile => {
+            tile.removeAttribute("onclick");
+        })
+        calculateScore();
         console.log('No condition met');
     }
 } 
@@ -298,6 +322,16 @@ function calculateScore() {
 scoreBtn.addEventListener('click', calculateScore);
     
 function resetGame() {
+    document.getElementById("tile1").setAttribute("onclick", "flipTile(1)");
+    document.getElementById("tile2").setAttribute("onclick", "flipTile(2)");
+    document.getElementById("tile3").setAttribute("onclick", "flipTile(3)");
+    document.getElementById("tile4").setAttribute("onclick", "flipTile(4)");
+    document.getElementById("tile5").setAttribute("onclick", "flipTile(5)");
+    document.getElementById("tile6").setAttribute("onclick", "flipTile(6)");
+    document.getElementById("tile7").setAttribute("onclick", "flipTile(7)");
+    document.getElementById("tile8").setAttribute("onclick", "flipTile(8)");
+    document.getElementById("tile9").setAttribute("onclick", "flipTile(9)");
+
     tiles.forEach(tile => {
         tile.style.visibility = "visible";
         tile.style.backgroundColor = "cornsilk"

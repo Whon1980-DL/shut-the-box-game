@@ -195,7 +195,7 @@ section#game-screen {
     margin-left: 10px;
 }
 
-/* Game button area */
+/* Bottom button area */
 .btn-area-container {
     display: block;
     margin-top: 10px;
@@ -203,12 +203,13 @@ section#game-screen {
 
 #dice-btn {
     font-size: 8px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
+/* Score area */
 #score-btn {
     font-size: 8px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 #score-display {
@@ -251,25 +252,60 @@ section#game-screen {
         font-size: 10px;
     }
 
+    /* Top button area */
+    #ext-btn {
+        height: 25px;
+        width: 120px;
+        padding: 5px;
+        border: 1px dashed cornsilk;
+        font-size: 8px;
+    }
+
+    #reset-btn {
+        height: 25px;
+        width: 120px;
+        padding: 5px;
+        border: 1px dashed cornsilk;
+        font-size: 8px;
+    }
+
     .dice img {
         width: 50px;
         height: 50px;
         margin-left: 10px;
     }
 
-    #ext-btn {
-    height: 20px;
-    width: 100px;
-    padding: 5px;
-    border: 1px dashed cornsilk;
-    font-size: 5px;
+    /* Score area */
+    #score-display {
+        max-width: none;
     }
 
-    #reset-btn {
-    height: 20px;
-    width: 100px;
-    padding: 5px;
-    border: 1px dashed cornsilk;
-    font-size: 5px;
+}
+
+/* media query: mobile phone and tablet (375px and smaller) */
+@media screen and (max-width: 375px) {
+    /* Global style */
+    .main-container {
+        height: 95vh;
+    }
+
+    /* Start Page */
+    #start-msg {
+        margin-top: 30px;
+    }
+
+    /* Tiles */
+    .tiles-container {
+        margin-top: 10px;
+    }
+
+    /* Bottom button area */
+    #dice-btn {
+        background-color: brown;
+    }
+
+    #score-btn {
+        background-color: brown;
+        margin-top: 15px;
     }
 }

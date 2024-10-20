@@ -94,7 +94,7 @@ section#game-screen {
     top: 80px;
     width: 100%;
     height: 100%;
-    background-color: none;
+    background-color: transparent;
 }
 
 .rules-content {
@@ -300,15 +300,17 @@ section#game-screen {
 
     /* Bottom button area */
     #dice-btn {
-        background-color: brown;
+        background-color: cornsilk;
+        color: brown;
     }
 
     #score-btn {
-        background-color: brown;
+        background-color: cornsilk;
+        color: brown;
         margin-top: 15px;
     }
 
     .hover:hover {
-        color: cornsilk;
+        color: brown;
     }
 }

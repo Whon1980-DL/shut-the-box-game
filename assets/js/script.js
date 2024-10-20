@@ -87,7 +87,7 @@ function flipTile(event) {
         chosenTileValue = 0;
         console.log('sumOfDice == 0');
         return;
-    } else if (chosenTileValue > sumOfDice && tempFlippedTileArray.length === 0 && flippedTileArray.length > 7) {  
+    } else if (chosenTileValue > sumOfDice && tempFlippedTileArray.length === 0 && flippedTileArray.length >= 7) {  
         alertMsg.style.display = 'block';
         alertMsg.innerHTML = "Game Over!";
         calculateScore();
@@ -103,7 +103,7 @@ function flipTile(event) {
         console.log('chosenTileValue > sumOfDice');
         console.log("sumOfDice == 0");
         return;
-    } else if (chosenTileValue < sumOfDice && tempFlippedTileArray.length === 0 && flippedTileArray.length > 7) {
+    } else if (chosenTileValue < sumOfDice && tempFlippedTileArray.length === 0 && flippedTileArray.length >= 7) {
         pickedTileOne = tempFlippedTileArray[0];
         console.log(pickedTileOne);
         document.getElementById('tile' + event).style.backgroundColor = "brown";
@@ -114,7 +114,7 @@ function flipTile(event) {
             tile.removeAttribute("onclick");
         })
         calculateScore();
-        console.log('chosenTileValue < sumOfDice && tempFlippedTileArray.length === 0 && flippedTileArray.length > 7');
+        console.log('chosenTileValue < sumOfDice && tempFlippedTileArray.length === 0 && flippedTileArray.length >= 7');
         console.log(chosenTileValue);
         return;
     } else if (chosenTileValue < sumOfDice && tempFlippedTileArray.length === 0) {

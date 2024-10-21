@@ -8,7 +8,9 @@ Users of this game learn the rules of Shut The Box so they can apply it to strat
 ![Am I Responsive](/assets/image/readme-image/am-i-responsive.png)
 
 [View Shut The Box Game live project here](https://whon1980-dl.github.io/shut-the-box-game/)
+
 - - -
+
 ## Table of Contents
 
 ### [User Experience (UX)](#user-experience-ux-1)
@@ -47,8 +49,8 @@ During game play messages are alert to help guid players through the game. Reset
     * Image containing Purple and Rose colour is used as main background image to portrait a retro look and feel of olden day neon lights. 
 
 * Typography
-    * Press Start 2P which has a pixel characteristic is used as main font to again keeps the retro look of the app.
-    * IBM Plex Mono which has a code style font is used in the game rules box to keep the retro look of the app as if they are reading it off an old computer command prompt. 
+    * Press-Start-2P which has a pixel characteristic is used as main font to again keeps the retro look of the app.
+    * IBM-Plex-Mono which has a code style font is used in the game rules box to keep the retro look of the app as if they are reading it off an old computer command prompt. 
 
 * Button Style
     * Rigid square boxes style is used for buttons to complement the look of pixel type font which agin keep the design to the retro concept.
@@ -56,3 +58,8 @@ During game play messages are alert to help guid players through the game. Reset
 * Wireframes
     Pen and paper in a notebook for planning function sequences and Figma web app for UX design.
 
+- - -
+
+## Features
+
+* This website 

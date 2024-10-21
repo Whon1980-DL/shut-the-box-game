@@ -1,2 +1,4 @@
 # Shut The Box
-Shut The Box is a dice game that can be enjoyed among friends, colleagues and family members anhywhere and anytime. The game combines the element of strategic planning and radom element of dice rolling outcome. It is great for teaching kids basic addition and subtraction. It helps to build mental math skills and is really fun to play. On another hand it can 
+Shut The Box is a dice game that can be enjoyed among friends, colleagues and family members anywhere and anytime. The game combines the element of strategic planning and random element of dice rolling outcome. It is great for teaching kids basic addition and subtraction. It helps to build mental math skills and is really fun to play. On another hand it is a century old game that has been popularly played in pubs among friends and therefore is a great game to help people socialise. 
+
+Users of this game learn the riles of Shut The Box so they can apply it to strategic planning and decision making with others in their lives. The site will be 

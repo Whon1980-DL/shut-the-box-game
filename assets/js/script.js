@@ -340,6 +340,23 @@ function flipTile(event) {
     }
 } 
 
+/* function unFlipTile(event) {
+    let chosenTileValue = event;
+    let chosenTileElement = document.getElementsByClassName("tile");
+     if (event.target.style.backgroundColor = "brown" && flippedTileArray.includes(chosenTileValue)) {
+        flippedTileArray.pop();
+        tempFlippedTileArray.pop();
+        document.getElementById('tile' + event).style.backgroundColor = "cornsilk";
+        document.getElementById('tile' + event).style.color = "brown";
+        alertMsg.style.display = 'block';
+        alertMsg.innerHTML = "Flip different tile!";
+     } else {
+        // do nothing
+     }
+     return;
+     console.log("I got unflipped");
+} */
+
 /**
  * Function to calculate score once game over or player can no longer flip any tiles. 
  * The score is display in a hidden p element which then unvealed.

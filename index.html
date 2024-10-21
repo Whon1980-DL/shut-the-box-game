@@ -21,46 +21,44 @@
                     <h1 id="start-msg">Shut The Box</h1>
                 </div>
             </header>
-            <main>
-                <div class="game-start-container" id="start">
-                    <div class="launch-btn-container" id="launch-btn">
-                    <button type="button" id="start-game" class="choice-btn uppercase hover">Start Game</button>
-                    </div>
+            <div class="game-start-container" id="start">
+                <div class="launch-btn-container" id="launch-btn">
+                <button type="button" id="start-game" class="choice-btn uppercase hover">Start Game</button>
                 </div>
-                <button type="button" id="rules-btn" class="btn hover uppercase" onclick="showRules()">How to play</button>
-                <div id="game-rules" class="rules">
-                    <div class="rules-content">
-                        <span class="close" onclick="closeModal()">&times;</span>
-                        <p>How To Play</p>
-                        <div>
-                            <p>To start, a player roll the dice by clicking the Roll The Dice button then add up the total
+            </div>
+            <button type="button" id="rules-btn" class="btn hover uppercase" onclick="showRules()">How to play</button>
+            <div id="game-rules" class="rules">
+                <div class="rules-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <p>How To Play</p>
+                    <div>
+                        <p>To start, a player roll the dice by clicking the Roll The Dice button then add up the total
                             of their roll.
                             They then lower 1 or more tiles that equal the total they rolled. For example,
                             if a player rolled a 4 and a 3, their total is 7.
                             Therefore, they could choose to lower one of the following tile combinations:
-                            </p>
-                            <ul>
-                                <li>7</li>
-                                <li>4 & 3</li>
-                                <li>5 & 2</li>
-                                <li>6 & 1</li>
-                                <li>4, 2 & 1</li>
-                            </ul>
-                            <p>After lowering the tile(s), the player continues to roll the dice and lower tiles until they
+                        </p>
+                         <ul>
+                            <li>7</li>
+                            <li>4 & 3</li>
+                            <li>5 & 2</li>
+                            <li>6 & 1</li>
+                            <li>4, 2 & 1</li>
+                        </ul>
+                        <p>After lowering the tile(s), the player continues to roll the dice and lower tiles until they
                             reach the point where no tiles correspond with the total they roll. For
                             example, if the total of a player’s roll is 6 and only the 7 and 2 tiles remain upright,
                             they’re unable to lower any tiles and their turn is over.
                             Once a player’s turn is over, the next player starts their turn with all of the tiles in the
                             upright position. This continues until each player has taken one turn.
-                            </p>
-                            <p>Players add the total of any upright tiles at the end of their turn to their score. The
+                        </p>
+                        <p>Players add the total of any upright tiles at the end of their turn to their score. The
                             player with the lowest score wins!</p>
-                            <p>If a player manages to lower all of the tiles on their turn, they “shut the box” and
-                            automatically win the game!</p>
-                        </div>
-                    </div>               
-                </div>
-            </main>    
+                        <p>If a player manages to lower all of the tiles on their turn, they “shut the box” and
+                         automatically win the game!</p>
+                    </div>
+                </div>               
+            </div>    
         </div>
     </section>
     <!-- Game screen area -->

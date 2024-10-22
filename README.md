@@ -21,6 +21,7 @@ Users of this game learn the rules of Shut The Box so they can apply it to strat
 ### [Technologies Used](#technologies-used-1)
 ### [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used-1)
 ### [Testing](#testing-1)
+* [Bugs](#bugs-1)
 * [Validation Results](#validation-results)
 * [Manual Testing](#manual-testing)
 * [Lighthouse Report](#lighthouse-report)
@@ -109,6 +110,9 @@ During game play messages are alert to help guid players through the game. Reset
     * The game score is displayed clearly for player to take note in order to compare to see who the winner is.
     * In the situation when player manage to flip all the tiles in one game, the alert will also let them know that they have shut the box by congratulate them and therefore automatically declared a winner of the game. 
     * After the game over is triggered player can start new game by clicking the Reset Game button. All of these features are very convenient and easy to utilise.
+
+    ![The Game Results](assets/image/readme-image/game-result-image.png)
+
 
 
 

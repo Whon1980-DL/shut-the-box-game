@@ -87,4 +87,15 @@ During game play messages are alert to help guid players through the game. Reset
     * Exit Game button can be found right at the top left hand corner of the game screen. This allows user to choose if they want to resit the start page to reconsult the game rules if they are not sure of how to play and how a winner is declared without resetting the game progress. 
     * Reset button can be found right at the top right hand corner of the game scree. This button allows user to reset the game progress and start the game all over again which could be after winning, Game Over or mid changing. 
 
-    ![Exit and Reset buttons](assets/image/readme-image/exit-reset.png)
+    ![Exit and Reset Buttons](assets/image/readme-image/exit-reset.png)
+
+* The mian game canvas area
+    * This area of the game page shows all 9 interactive tiles and dice that will be used for rolling to get the sum. 
+    * These tile are interactive where player can select tile/s after rolling the dice from here. The tile will also change colour after being selected and will become invisible altogether once the sum of dice is met either by the flipped tile itself being equal to sum of dice or subsequence selection adding to it to become equal to sum of dice. This help player with keepinmg track of the process. 
+    * This area also is where all the alert messages to guid player through the game is displayed in gold colour. The message will alert if the correct process of the game isn't followed such as if player select a tile without rolling the dice first an alert message will show as Please roll the dice!.
+
+    ![Main Game Canvas](assets/image/readme-image/main-game-canvas.png)
+
+
+
+

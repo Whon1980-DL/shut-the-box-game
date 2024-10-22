@@ -247,9 +247,10 @@ _ _ _
 
 ### Media 
 
- * [Freepik](https://www.freepik.com/) free stock photos, royalty free images.
- * [Freeconvert](https://www.freeconvert.com/) Image file format converting.
-
+ * [Freepik](https://www.freepik.com/)For free retro background image.
+ * [WPClipart](https://www.wpclipart.com/recreation/games/dice/die_face_6.png.html) For free dice images.
+ * [Imgflip](https://imgflip.com/gif/96gh67) for dice rolling .gif creation.
+ 
 _ _ _
 
 ## Acknowledgements

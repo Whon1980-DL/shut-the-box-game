@@ -21,7 +21,7 @@ Users of this game learn the rules of Shut The Box so they can apply it to strat
 ### [Technologies Used](#technologies-used-1)
 ### [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used-1)
 ### [Testing](#testing-1)
-* [Bugs](#bugs-1)
+* [Bugs](#bugs)
 * [Validation Results](#validation-results)
 * [Manual Testing](#manual-testing)
 * [Lighthouse Report](#lighthouse-report)
@@ -153,7 +153,7 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
  * [JSHint, a JavaScript Code Quality Tool](https://jshint.com/)
 
 _ _ _
-
+<a id="bugs"></a>
 ### Bugs
 #### Solved bugs
 * When I create a function and saw that the if-else condition were not correctly math I noticed the function were never stop their execution so I added a 'return;' to each function and that fixed the problem.
@@ -250,7 +250,7 @@ _ _ _
  * [Freepik](https://www.freepik.com/)For free retro background image.
  * [WPClipart](https://www.wpclipart.com/recreation/games/dice/die_face_6.png.html) For free dice images.
  * [Imgflip](https://imgflip.com/gif/96gh67) for dice rolling .gif creation.
- 
+
 _ _ _
 
 ## Acknowledgements

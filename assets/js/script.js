@@ -81,12 +81,13 @@ function rollTheDice() {
         diceNum2.setAttribute("alt","Dice with" + randomNumber2 + "dots");
 
         sumOfDice = randomNumber1 + randomNumber2;
+
+        alertMsg.style.display = 'block';
+        alertMsg.innerHTML = "Now select a tile!";
         
         return sumOfDice;
 
-    }, 2500);
-
-     alertMsg.style.display = 'none';
+    }, 2000);
 
 }
 

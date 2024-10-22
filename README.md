@@ -53,7 +53,7 @@ During game play messages are alert to help guid players through the game. Reset
     * IBM-Plex-Mono which has a code style font is used in the game rules box to keep the retro look of the app as if they are reading it off an old computer command prompt. 
 
 * Button Style
-    * Rigid square boxes style is used for buttons to complement the look of pixel type font which agin keep the design to the retro concept.
+    * Rigid square boxes style is used for buttons to complement the look of pixel type font which again keep the design to the retro concept.
 
 * Wireframes
     Pen and paper in a notebook for planning function sequences and Figma web app for UX design.

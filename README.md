@@ -62,4 +62,29 @@ During game play messages are alert to help guid players through the game. Reset
 
 ## Features
 
-* This website 
+* This website is targeting adults and children who would like to enjoy a game that incorporate some element of chances and strategic planning into one. The game round is quick and can be played among a group of people during their socialising time. Kids can also learn simple addition and subtraction from playing the game which having fun at the same time.
+
+### Existing Features
+
+#### Start Page
+
+* Header
+    * Featured at the top of the page, the header shows a message that challenge the player to play and the game name is displayed in bright gold colour below the challenge message. 
+    * This header clearly indicate the player what game they are playing. 
+
+    ![Start Game Header](/assets/image/readme-image/game-page-header.png)
+
+* The Start Game and How To Play options section
+    * Player who has played to game elsewhere before can either choose to dive start into the game by selecting the Start Game option of revisit the rules of the game be selecting How To Play button.
+    * How to play button is designed using modal box concept where teh box that contain game rule only gets reveal once button is clicked to be displayed over the start game page.
+    
+    ![Option Sections](assets/image/readme-image/options-section.png)
+    ![Ruels Content Box](assets/image/readme-image/rules-content-box.png)
+
+#### Game Page
+
+* The Exit Game and Reset Game buttons
+    * Exit Game button can be found right at the top left hand corner of the game screen. This allows user to choose if they want to resit the start page to reconsult the game rules if they are not sure of how to play and how a winner is declared without resetting the game progress. 
+    * Reset button can be found right at the top right hand corner of the game scree. This button allows user to reset the game progress and start the game all over again which could be after winning, Game Over or mid changing. 
+
+    ![Exit and Reset buttons](assets/image/readme-image/exit-reset.png)

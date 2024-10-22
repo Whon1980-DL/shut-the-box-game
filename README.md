@@ -74,7 +74,7 @@ During game play messages are alert to help guid players through the game. Reset
 
     ![Start Game Header](/assets/image/readme-image/game-page-header.png)
 
-* The Start Game and How To Play options section
+* The Start Game and How To Play Options Section
     * Player who has played to game elsewhere before can either choose to dive start into the game by selecting the Start Game option of revisit the rules of the game be selecting How To Play button.
     * How to play button is designed using modal box concept where teh box that contain game rule only gets reveal once button is clicked to be displayed over the start game page.
     
@@ -89,12 +89,26 @@ During game play messages are alert to help guid players through the game. Reset
 
     ![Exit and Reset Buttons](assets/image/readme-image/exit-reset.png)
 
-* The mian game canvas area
+* The Mian Game Canvas Area
     * This area of the game page shows all 9 interactive tiles and dice that will be used for rolling to get the sum. 
     * These tile are interactive where player can select tile/s after rolling the dice from here. The tile will also change colour after being selected and will become invisible altogether once the sum of dice is met either by the flipped tile itself being equal to sum of dice or subsequence selection adding to it to become equal to sum of dice. This help player with keepinmg track of the process. 
     * This area also is where all the alert messages to guid player through the game is displayed in gold colour. The message will alert if the correct process of the game isn't followed such as if player select a tile without rolling the dice first an alert message will show as Please roll the dice!.
 
     ![Main Game Canvas](assets/image/readme-image/main-game-canvas.png)
+
+* Game Control Area and Score Display
+    * This area contain Roll The Dice button that allows the player to initiate the game. 
+    * A feature is implementedd so that dice can only be rolled once after which a tile needs to be flip thus preventing any player who may not like what they see and want to roll the dice again before fliping a tile.
+    * Calculate Score button is also available in the situation when the game does not calculate the score automatically. The score is displayed below the buttons for player to take note of their score and to compare with other players. 
+    
+    ![Game Control Area and Score Display](assets/image/readme-image/game-control-area-score-display.png)
+
+* The Game Results
+    * When player flip the tiles and the sum is equal to sum of dice the tiles will disappear and message will show Great Job!. When player flip a tile/s but the sum of their selected tile is still less than sum of dice the game will prompt player to select another tile with a message Flip another tile. If the tiles left can not be used to add up to sum of dice the game will display game over and score display automatically as well as Game Over message displayed. 
+    * Various if-else statement are used to meet each possible outcome of tile/s selection. If the game over is not triggered automatically the user can all trigger it by clicking on calculate score where a score will be displayed and game over. 
+    * The game score is displayed clearly for player to take note in order to compare to see who the winner is.
+    * In the situation when player manage to flip all the tiles in one game, the alert will also let them know that they have shut the box by congratulate them and therefore automatically declared a winner of the game. 
+    * After the game over is triggered player can start new game by clicking the Reset Game button. All of these features are very convenient and easy to utilise.
 
 
 

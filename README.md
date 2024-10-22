@@ -113,7 +113,180 @@ During game play messages are alert to help guid players through the game. Reset
 
     ![The Game Results](assets/image/readme-image/game-result-image.png)
 
+_ _ _
 
+## Features Left to Implement
+* When there is time, I would like to add a feature that allow player to deselect tile incase they accidentally select the wrong one.
+* Also when there is time, I would like to create a dedicated page for the game result page to make it more stand out. 
+
+
+## Technologies Used
+
+ * [HTML5](https://en.wikipedia.org/wiki/HTML5)
+ * [CSS3](https://en.wikipedia.org/wiki/CSS)
+ * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+_ _ _
+
+## Frameworks, Libraries & Programs Used
+
+ * [Gitpod](https://www.gitpod.io/)
+    * To write the code.
+ * [Git](https://git-scm.com/)
+    * For vesion control.
+ * [Github](https://github.com/)
+    * Deployment of the website and storing the files online.
+ * [Google Fonts](https://fonts.google.com/)
+    * Import main font for the website.
+* [Figma](https://www.figma.com)
+    * Create mockup design of the UX.
+ * [Am I Responsive](https://ui.dev/amiresponsive)
+    * Mockup picture for the README file.
+_ _ _
+
+## Testing
+
+The W3C Markup Validator and W3C CSS Validator services were used to validate every page of the project to ensure there were no errors. JSHint was used to helps to detect errors and potential problems in my JavaScript code.
+
+ * [W3C Markup Validtor](https://validator.w3.org/)
+ * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+ * [JSHint, a JavaScript Code Quality Tool](https://jshint.com/)
+
+_ _ _
+
+### Bugs
+#### Solved bugs
+* When I create a function and saw that the if-else condition were not correctly math I noticed the function were never stop their execution so I added a 'return;' to each function and that fixed the problem.
+* An = sign was also used in the wrong context instead of == sign being usedin the comparison statement which resulted in a lot of expected bugs which was then identified corrected afterwords. 
+
+
+### Validation results
+
+<details>
+<summary>index.html
+</summary>
+
+![HTML validation result](/assets/images/readme/html-validation.png)
+</details>
+
+<details>
+<summary>style.css
+</summary>
+
+![CSS validation result](/assets/images/readme/css-validation.png)
+</details>
+
+### Manual Testing
+
+* The application was tested on Google Chrome, Microsoft Edge, and Safari browser.
+* The application was viewed on a desktop computer, laptop, Samsung Galaxy Tab S9 tablet and Motorola G32 mobile phone.
+* A large amount of testing was done to ensure all buttons and features are working correcly and alert messages display accordingly.
+* Family and friends were asked to review the application for a better understanding of the user experience.
+* Dev Tools was used to test how the site looks on various screen sizes and console log was used extensively to see which fucntion was executed.
+
+### Lighthouse Report
+
+#### Mobile analysis
+<details>
+<summary>Home Page
+</summary>
+
+![Lighthouse report](/assets/images/readme/home-mobile-report.png)
+</details>
+<details>
+<summary>Picture-Gallery Page
+</summary>
+
+#### Desktop analysis
+<details>
+<summary>Home Page
+</summary>
+
+![Home Page lighthouse report](/assets/images/readme/home-desktop-report.png)
+</details>
+<details>
+<summary>Picture-Gallery Page
+</summary>
+
+![Picture-Gallery Page lighthouse report](/assets/images/readme/gallery-desktop-report.png)
+</details>
+<details>
+<summary>Contact Page
+</summary>
+
+![Contact Page lighthouse report](/assets/images/readme/contact-desktop-report.png)
+</details>
+<details>
+<summary>Courses Detail Page
+</summary>
+
+![Courses Detail Page lighthouse report](/assets/images/readme/courses-detail-desktop-report.png)
+</details>
+<details>
+<summary>Acknowledge Page
+</summary>
+
+![Acknowledge Page lighthouse report](assets/images/readme/acknowledge-desktop-report.png)
+</details>
+
+_ _ _
+
+## Deployment and local development
+
+### GitHub Pages
+
+GitHub Pages used to deploy live version of the website.
+1. Log in to GitHub and locate [GitHub Repository Kids English Club](https://github.com/Whon1980-DL/kids-english-club)
+2. At the top of the Repository(not the main navigation) locate "Settings" button on the menu.
+3. Scroll down the Settings page until you locate "GitHub Pages".
+4. Under "Source", click the dropdown menu "None" and select "Main" and click "Save".
+5. The page will automatically refresh.
+6. Scroll back to locate the now-published site [link](https://whon1980-dl.github.io/kids-english-club/index.html) in the "GitHub Pages" section.
+
+### Forking the GitHub Repository
+
+By forking the repository, we make a copy of the original repository on our GitHub account to view and change without affecting the original repository by using these steps:
+
+1. Log in to GitHub and locate [GitHub Repository Kids English Club](https://github.com/Whon1980-DL/kids-english-club)
+2. At the top of the Repository(under the main navigation) locate "Fork" button.
+3. Now you should have a copy of the original repository in your GitHub account.
+
+### Local Clone
+
+1. Log in to GitHub and locate [GitHub Repository Kids English Club](https://github.com/Whon1980-DL/kids-english-club)
+2. Under the repository name click "Clone or download"
+3. Click on the code button, select clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone` and then paste The URL copied in the step 3.
+7. Press Enter and your local clone will be created.
+
+_ _ _
+
+## Credits
+
+### Code
+ * Understanding the concept of flexbox was learned through [Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+ * The README template was helpfully provided by [Code Institute (template)](https://github.com/Code-Institute-Solutions/SampleREADME)
+
+### Content
+
+ * All content was written by the developer.
+ * [Color contrast checker](https://coolors.co/contrast-checker/112a46-acc8e5) was used to decide which colors would be used for the website.
+
+### Media 
+
+ * [Freepik](https://www.freepik.com/) free stock photos, royalty free images.
+ * [Freeconvert](https://www.freeconvert.com/) Image file format converting.
+
+_ _ _
+
+## Acknowledgements
+
+ * My mentor Mitko Bachvarov provided helpful feedback and a link to the Flexbox guide.
+ * Slack community for encouragement and information.
+ * My wife who had looked after me and the children while I was completing the project.
+ * My two sons who has been very supporting and encouraging. 
 
 
 

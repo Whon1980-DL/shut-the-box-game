@@ -111,6 +111,7 @@ section#game-screen {
     color: darkred;
     text-align: left;
     text-transform: none;
+    font-weight: bold;
 }
 
 /* Style for the close button*/

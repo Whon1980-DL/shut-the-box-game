@@ -166,14 +166,14 @@ _ _ _
 <summary>index.html
 </summary>
 
-![HTML validation result](/assets/images/readme/html-validation.png)
+![HTML validation result](/assets/image/readme-image/html-validation-result.png)
 </details>
 
 <details>
 <summary>style.css
 </summary>
 
-![CSS validation result](/assets/images/readme/css-validation.png)
+![CSS validation result](/assets/image/readme-image/css-validation-result.png)
 </details>
 
 ### Manual Testing
@@ -188,47 +188,19 @@ _ _ _
 
 #### Mobile analysis
 <details>
-<summary>Home Page
+<summary>Shut The Box
 </summary>
 
-![Lighthouse report](/assets/images/readme/home-mobile-report.png)
+![Mobile lighthouse report](/assets/image/readme-image/mobile-lighthouse-report.png)
 </details>
-<details>
-<summary>Picture-Gallery Page
-</summary>
 
 #### Desktop analysis
 <details>
 <summary>Home Page
 </summary>
 
-![Home Page lighthouse report](/assets/images/readme/home-desktop-report.png)
+![Desktop lighthouse report](/assets/image/readme-image/desktop-lighthouse-report.png)
 </details>
-<details>
-<summary>Picture-Gallery Page
-</summary>
-
-![Picture-Gallery Page lighthouse report](/assets/images/readme/gallery-desktop-report.png)
-</details>
-<details>
-<summary>Contact Page
-</summary>
-
-![Contact Page lighthouse report](/assets/images/readme/contact-desktop-report.png)
-</details>
-<details>
-<summary>Courses Detail Page
-</summary>
-
-![Courses Detail Page lighthouse report](/assets/images/readme/courses-detail-desktop-report.png)
-</details>
-<details>
-<summary>Acknowledge Page
-</summary>
-
-![Acknowledge Page lighthouse report](assets/images/readme/acknowledge-desktop-report.png)
-</details>
-
 _ _ _
 
 ## Deployment and local development
@@ -236,24 +208,24 @@ _ _ _
 ### GitHub Pages
 
 GitHub Pages used to deploy live version of the website.
-1. Log in to GitHub and locate [GitHub Repository Kids English Club](https://github.com/Whon1980-DL/kids-english-club)
+1. Log in to GitHub and locate [GitHub Repository Shut The Box Game](https://github.com/Whon1980-DL/shut-the-box-game)
 2. At the top of the Repository(not the main navigation) locate "Settings" button on the menu.
 3. Scroll down the Settings page until you locate "GitHub Pages".
 4. Under "Source", click the dropdown menu "None" and select "Main" and click "Save".
 5. The page will automatically refresh.
-6. Scroll back to locate the now-published site [link](https://whon1980-dl.github.io/kids-english-club/index.html) in the "GitHub Pages" section.
+6. Scroll back to locate the now-published site [link](https://whon1980-dl.github.io/shut-the-box-game/) in the "GitHub Pages" section.
 
 ### Forking the GitHub Repository
 
 By forking the repository, we make a copy of the original repository on our GitHub account to view and change without affecting the original repository by using these steps:
 
-1. Log in to GitHub and locate [GitHub Repository Kids English Club](https://github.com/Whon1980-DL/kids-english-club)
+1. Log in to GitHub and locate [GitHub Repository Shut The Box Game](https://github.com/Whon1980-DL/shut-the-box-game)
 2. At the top of the Repository(under the main navigation) locate "Fork" button.
 3. Now you should have a copy of the original repository in your GitHub account.
 
 ### Local Clone
 
-1. Log in to GitHub and locate [GitHub Repository Kids English Club](https://github.com/Whon1980-DL/kids-english-club)
+1. Log in to GitHub and locate [GitHub Repository Shut The Box Game](https://github.com/Whon1980-DL/shut-the-box-game)
 2. Under the repository name click "Clone or download"
 3. Click on the code button, select clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 4. Open Git Bash
@@ -266,7 +238,6 @@ _ _ _
 ## Credits
 
 ### Code
- * Understanding the concept of flexbox was learned through [Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
  * The README template was helpfully provided by [Code Institute (template)](https://github.com/Code-Institute-Solutions/SampleREADME)
 
 ### Content
@@ -283,10 +254,9 @@ _ _ _
 
 ## Acknowledgements
 
- * My mentor Mitko Bachvarov provided helpful feedback and a link to the Flexbox guide.
+ * My mentor Mitko Bachvarov provided helpful feedback and guided through certain step of debugging process.
  * Slack community for encouragement and information.
- * My wife who had looked after me and the children while I was completing the project.
- * My two sons who has been very supporting and encouraging. 
+ * My wife and my sons for trying the applicaiton several times and gave feedback on what need improving and what extra feature should be added. 
 
 
 

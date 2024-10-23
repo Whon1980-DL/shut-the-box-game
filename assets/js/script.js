@@ -27,6 +27,7 @@ let diceNum2;
 function unhideGame() {    
     home.style.display = "none";
     game.style.display = "block";
+    resetGame();
 }
 
 gamePageBtn.addEventListener('click', unhideGame);
@@ -60,7 +61,7 @@ startPageBtn.addEventListener('click', showStart);
 
 /**
  * Funciton to roll dice by using random number function and attach numbers to src attribute setting. 
- * Add event listener method is used. Timne out is set so funciton finish executing after 2,500ms
+ * Add event listener method is used. Timne out is set so funciton finish executing after 2,000ms
  */
 rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
 
@@ -229,7 +230,6 @@ function flipTile(event) {
         document.getElementById('tile' + event).style.visibility = "hidden";
         document.getElementById('tile' + pickedTileOne).style.visibility = "hidden";
         document.getElementById('tile' + pickedTileTwo).style.visibility = "hidden";
-        setTileVisibility(event, pickedTileOne, pickedTileTwo, null);
         rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
         return setAlertMessage("Congratulation! You just shut the box!");
     } else if ((chosenTileValue + pickedTileOne + pickedTileTwo + pickedTileThree) > sumOfDice && tempFlippedTileArray.length === 3 && chosenTileValue !== pickedTileOne && chosenTileValue !== pickedTileTwo && chosenTileValue !== pickedTileThree) {  
@@ -286,15 +286,6 @@ function setAlertMessage(message) {
     document.getElementById('tile9').disabled = state;
   }
 
-function setTileVisibility(event, tileOne, tileTwo, tileThree) {
-    document.getElementById('tile' + event).style.visibility = "hidden";
-    document.getElementById('tile' + tileOne).style.visibility = "hidden";
-    document.getElementById('tile' + tileTwo).style.visibility = "hidden";
-        if (tileThree != null) {
-            document.getElementById('tile' + tileThree).style.visibility = "hidden";
-        }
-  }
-
 /**
  * Function to calculate score once game over or player can no longer flip any tiles. 
  * The score is display in a hidden p element which then unvealed.
@@ -308,8 +299,7 @@ function calculateScore() {
     scoreDisplay.style.display = "block"; 
     document.getElementById("score-number").innerText = displayScore;
 
-    alertMsg.style.display = 'block';
-    alertMsg.innerHTML = "Game Over!";
+    setAlertMessage('Game Over!');
 }
 
 /**

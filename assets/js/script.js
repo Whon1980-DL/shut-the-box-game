@@ -82,8 +82,9 @@ function rollTheDice() {
 
         sumOfDice = randomNumber1 + randomNumber2;
 
-        alertMsg.style.display = 'block';
-        alertMsg.innerHTML = "Now select a tile!";
+        setAlertMessage('Now select a tile!');
+
+        toggleButtons(false)
         
         return sumOfDice;
 
@@ -132,7 +133,7 @@ function flipTile(event) {
         document.getElementById('tile' + event).style.visibility = "hidden";
         pickedTileOne = 0;
         sumOfDice = 0;
-        document.getElementById("tile1").disabled = true
+        toggleButtons(true)
         rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
         return setAlertMessage("Great job!");
     } else if (chosenTileValue == sumOfDice && tempFlippedTileArray.length === 0 && flippedTileArray.length === 8)  {
@@ -173,7 +174,7 @@ function flipTile(event) {
         document.getElementById('tile' + pickedTileOne).style.visibility = "hidden";
         pickedTileOne = 0;
         sumOfDice = 0;
-        document.getElementById("tile1").disabled = true
+        toggleButtons(true)
         rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
         return setAlertMessage("Great job!");
     } else if ((chosenTileValue + pickedTileOne) == sumOfDice && chosenTileValue !== pickedTileOne && flippedTileArray.length === 8) {
@@ -218,7 +219,7 @@ function flipTile(event) {
         document.getElementById('tile' + event).style.visibility = "hidden";
         document.getElementById('tile' + pickedTileOne).style.visibility = "hidden";
         document.getElementById('tile' + pickedTileTwo).style.visibility = "hidden";
-        document.getElementById("tile1").disabled = true
+        toggleButtons(true)
         rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
         return setAlertMessage("Great Job!");
     } else if ((chosenTileValue + pickedTileOne + pickedTileTwo) == sumOfDice && tempFlippedTileArray.length === 2 && chosenTileValue !== pickedTileOne && chosenTileValue !== pickedTileTwo && flippedTileArray.length === 8) {  
@@ -247,7 +248,7 @@ function flipTile(event) {
         document.getElementById('tile' + pickedTileOne).style.visibility = "hidden";
         document.getElementById('tile' + pickedTileTwo).style.visibility = "hidden";
         document.getElementById('tile' + pickedTileThree).style.visibility = "hidden";
-        document.getElementById("tile1").disabled = true
+        toggleButtons(true);
         rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
         return setAlertMessage('Great job!');
     } else if ((chosenTileValue + pickedTileOne + pickedTileTwo + pickedTileThree) == sumOfDice && tempFlippedTileArray.length === 3 && chosenTileValue !== pickedTileOne && chosenTileValue !== pickedTileTwo && chosenTileValue !== pickedTileThree && flippedTileArray.length === 8) {  
@@ -273,10 +274,22 @@ function setAlertMessage(message) {
     alertMsg.innerHTML = message
   }
 
-  function setTileVisibility(event, tileOne, tileTwo, tileThree) {
+  function toggleButtons(state) {
+    document.getElementById('tile1').disabled = state;
+    document.getElementById('tile2').disabled = state;
+    document.getElementById('tile3').disabled = state;
+    document.getElementById('tile4').disabled = state;
+    document.getElementById('tile5').disabled = state;
+    document.getElementById('tile6').disabled = state;
+    document.getElementById('tile7').disabled = state;
+    document.getElementById('tile8').disabled = state;
+    document.getElementById('tile9').disabled = state;
+  }
+
+function setTileVisibility(event, tileOne, tileTwo, tileThree) {
     document.getElementById('tile' + event).style.visibility = "hidden";
-        document.getElementById('tile' + tileOne).style.visibility = "hidden";
-        document.getElementById('tile' + tileTwo).style.visibility = "hidden";
+    document.getElementById('tile' + tileOne).style.visibility = "hidden";
+    document.getElementById('tile' + tileTwo).style.visibility = "hidden";
         if (tileThree != null) {
             document.getElementById('tile' + tileThree).style.visibility = "hidden";
         }
@@ -338,6 +351,8 @@ function resetGame() {
         document.getElementById("score-number").innerText = "";
 
         rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
+
+        toggleButtons(false)
     });
 
 return;

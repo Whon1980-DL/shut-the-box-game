@@ -37,11 +37,11 @@ Users of this game learn the rules of Shut The Box so they can apply it to strat
 
 The website will be targeted towards adults and children as a simple app to learn, practice and have fun with.
 
-The name of the game is clearly shown in bright yellow colour to shout out and the question above it is to challenge a player to try to game. 
+The name of the game is clearly shown in bright yellow colour to shout out and the question above it is to challenge a player to try the game. 
 
 The app also provides a  clear instruction of how to play. Buttons allowing players to navigate around the game such as start game and exit game provide ways for user to toggle between start screen and game screen. 
 
-During game play messages are alert to help guid players through the game. Reset button is provided for easy game resetting if player wants to start new game.
+During game play messages are alert to help guid players through the game. Reset button is provided for easy game resetting if player wants to start a new game.
 
 ## Design
 
@@ -63,21 +63,21 @@ During game play messages are alert to help guid players through the game. Reset
 
 ## Features
 
-* This website is targeting adults and children who would like to enjoy a game that incorporate some element of chances and strategic planning into one. The game round is quick and can be played among a group of people during their socialising time. Kids can also learn simple addition and subtraction from playing the game which having fun at the same time.
+* This website is targeting adults and children who would like to enjoy a game that incorporate some element of chances and strategic planning into one. The game round is quick and can be played among a group of people during their socialising time. Kids can also learn simple addition and subtraction from playing the game while having fun at the same time.
 
 ### Existing Features
 
 #### Start Page
 
 * Header
-    * Featured at the top of the page, the header shows a message that challenge the player to play and the game name is displayed in bright gold colour below the challenge message. 
+    * Featured at the top of the page, the header shows a message that challenge the player to play and the game name is displayed in bright yellow colour below the challenge message. 
     * This header clearly indicate the player what game they are playing. 
 
     ![Start Game Header](/assets/image/readme-image/game-page-header.png)
 
 * The Start Game and How To Play Options Section
-    * Player who has played to game elsewhere before can either choose to dive start into the game by selecting the Start Game option of revisit the rules of the game be selecting How To Play button.
-    * How to play button is designed using modal box concept where teh box that contain game rule only gets reveal once button is clicked to be displayed over the start game page.
+    * Player who has played the game elsewhere before can either choose to dive straight into the game by selecting the Start Game option or revisit the rules of the game be selecting How To Play button.
+    * How to play button is designed using modal box concept where the box that contain game rule only gets revealed once button is clicked to be displayed over the start game page.
     
     ![Option Sections](assets/image/readme-image/options-section.png)
     ![Ruels Content Box](assets/image/readme-image/rules-content-box.png)
@@ -86,13 +86,13 @@ During game play messages are alert to help guid players through the game. Reset
 
 * The Exit Game and Reset Game buttons
     * Exit Game button can be found right at the top left hand corner of the game screen. This allows user to choose if they want to resit the start page to reconsult the game rules if they are not sure of how to play and how a winner is declared without resetting the game progress. 
-    * Reset button can be found right at the top right hand corner of the game scree. This button allows user to reset the game progress and start the game all over again which could be after winning, Game Over or mid changing. 
+    * Reset button can be found right at the top right hand corner of the game scree. This button allows user to reset the game progress and start the game all over again which could be after winning, Game Over or mind changing. 
 
     ![Exit and Reset Buttons](assets/image/readme-image/exit-reset.png)
 
-* The Mian Game Canvas Area
+* The Main Game Canvas Area
     * This area of the game page shows all 9 interactive tiles and dice that will be used for rolling to get the sum. 
-    * These tile are interactive where player can select tile/s after rolling the dice from here. The tile will also change colour after being selected and will become invisible altogether once the sum of dice is met either by the flipped tile itself being equal to sum of dice or subsequence selection adding to it to become equal to sum of dice. This help player with keepinmg track of the process. 
+    * These tiles are interactive where player can select tile/s after rolling the dice from here. The tile will also change colour after being selected and will become invisible altogether once the sum of dice is met either by the flipped tile itself being equal to sum of dice or subsequence selection adding to it to become equal to sum of dice. This help player keeping track of the progress. 
     * This area also is where all the alert messages to guid player through the game is displayed in gold colour. The message will alert if the correct process of the game isn't followed such as if player select a tile without rolling the dice first an alert message will show as Please roll the dice!.
 
     ![Main Game Canvas](assets/image/readme-image/main-game-canvas.png)
@@ -106,9 +106,9 @@ During game play messages are alert to help guid players through the game. Reset
 
 * The Game Results
     * When player flip the tiles and the sum is equal to sum of dice the tiles will disappear and message will show Great Job!. When player flip a tile/s but the sum of their selected tile is still less than sum of dice the game will prompt player to select another tile with a message Flip another tile. If the tiles left can not be used to add up to sum of dice the game will display game over and score display automatically as well as Game Over message displayed. 
-    * Various if-else statement are used to meet each possible outcome of tile/s selection. If the game over is not triggered automatically the user can all trigger it by clicking on calculate score where a score will be displayed and game over. 
+    * Various if-else statement are used to meet each possible outcome of tile/s selection. If the game over is not triggered automatically the user can also trigger it by clicking on calculate score where a score will be displayed and game over. 
     * The game score is displayed clearly for player to take note in order to compare to see who the winner is.
-    * In the situation when player manage to flip all the tiles in one game, the alert will also let them know that they have shut the box by congratulate them and therefore automatically declared a winner of the game. 
+    * In the situation when player manage to flip all the tiles in one game, the alert will also let them know that they have shut the box by congratulate them and therefore automatically declared a winner of the game message displayed. 
     * After the game over is triggered player can start new game by clicking the Reset Game button. All of these features are very convenient and easy to utilise.
 
     ![The Game Results](assets/image/readme-image/game-result-image.png)
@@ -156,8 +156,8 @@ _ _ _
 <a id="bugs"></a>
 ### Bugs
 #### Solved bugs
-* When I create a function and saw that the if-else condition were not correctly math I noticed the function were never stop their execution so I added a 'return;' to each function and that fixed the problem.
-* An = sign was also used in the wrong context instead of == sign being usedin the comparison statement which resulted in a lot of expected bugs which was then identified corrected afterwords. 
+* When I create a function and saw that the if-else condition were not correctly match I noticed the function were never stop their execution so I added a 'return;' to each function and that fixed the problem.
+* An = sign was also used in the wrong context instead of == sign being used in the comparison statement which resulted in a lot of expected bugs which was then identified and corrected afterwords. 
 
 
 ### Validation results
@@ -180,9 +180,9 @@ _ _ _
 
 * The application was tested on Google Chrome, Microsoft Edge, and Safari browser.
 * The application was viewed on a desktop computer, laptop, Samsung Galaxy Tab S9 tablet and Motorola G32 mobile phone.
-* A large amount of testing was done to ensure all buttons and features are working correcly and alert messages display accordingly.
+* A large amount of testing was done to ensure all buttons and features are working correcly and alert messages displayed accordingly.
 * Family and friends were asked to review the application for a better understanding of the user experience.
-* Dev Tools was used to test how the site looks on various screen sizes and console log was used extensively to see which fucntion was executed.
+* Dev Tools was used to test how the site looks on various screen sizes and console log was used extensively to see which function was executed.
 
 ### Lighthouse Report
 
@@ -196,7 +196,7 @@ _ _ _
 
 #### Desktop analysis
 <details>
-<summary>Home Page
+<summary>Shut The Box
 </summary>
 
 ![Desktop lighthouse report](/assets/image/readme-image/desktop-lighthouse-report.png)
@@ -257,7 +257,7 @@ _ _ _
 
  * My mentor Mitko Bachvarov provided helpful feedback and guided through certain step of debugging process.
  * Slack community for encouragement and information.
- * My wife and my sons for trying the applicaiton several times and gave feedback on what need improving and what extra feature should be added. 
+ * My wife and my sons for testing the applicaiton several times and gave feedback on what need improving and what extra feature should be added. 
 
 
 

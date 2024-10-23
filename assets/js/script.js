@@ -22,7 +22,7 @@ let diceNum1;
 let diceNum2;
 
 /**
- * Function to hide or unhide homegame screen and game screen by adding event listener to game button
+ * Function to hide or unhide homegame screen and game screen by adding event listener to game button and cal for reset game function
  */
 function unhideGame() {    
     home.style.display = "none";

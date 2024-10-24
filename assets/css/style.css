@@ -239,6 +239,9 @@ section#game-screen {
 
     /* Start page */
     #rules-btn {
+        background-color: cornsilk;
+        border: 2px dashed brown;
+        color: brown;
         margin-top: 30px;
     }
 
@@ -275,9 +278,21 @@ section#game-screen {
         margin-left: 10px;
     }
 
+    #dice-btn {
+        background-color: cornsilk;
+        border: 2px dashed brown;
+        color: brown;
+    }
+
     /* Score area */
     #score-display {
         max-width: 70%;
+    }
+
+    #score-btn {
+        background-color: cornsilk;
+        border: 2px dashed brown;
+        color: brown;
     }
 
 }

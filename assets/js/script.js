@@ -112,8 +112,9 @@ function flipTile(event) {
         return setAlertMessage("Wrong flip!");
     } else if (chosenTileValue < sumOfDice && tempFlippedTileArray.length === 0 && flippedTileArray.length > 7) {
         pickedTileOne = tempFlippedTileArray[0];
-        document.getElementById('tile' + event).style.backgroundColor = "brown";
-        document.getElementById('tile' + event).style.color = "cornsilk";
+        //document.getElementById('tile' + event).style.backgroundColor = "brown";
+        //document.getElementById('tile' + event).style.color = "cornsilk";
+        setTileSelected();
         tiles.forEach(tile => {
             tile.removeAttribute("onclick");
         });

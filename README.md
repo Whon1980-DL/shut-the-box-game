@@ -85,8 +85,8 @@ During game play messages are alert to help guid players through the game. Reset
 #### Game Page
 
 * The Exit Game and Reset Game buttons
-    * Exit Game button can be found right at the top left hand corner of the game screen. This allows user to choose if they want to resit the start page to reconsult the game rules if they are not sure of how to play and how a winner is declared without resetting the game progress. 
-    * Reset button can be found right at the top right hand corner of the game scree. This button allows user to reset the game progress and start the game all over again which could be after winning, Game Over or mind changing. 
+    * Exit Game button can be found right at the top left hand corner of the game screen. This allows user to choose if they want to exit the game perhaps to revisit the game rules before trying to play the game again. 
+    * Reset button can be found right at the top right hand corner of the game screen. This button allows user to reset the game progress and start the game all over again which could be after winning, Game Over or mind changing without the neext to exit game or refresh page. 
 
     ![Exit and Reset Buttons](assets/image/readme-image/exit-reset.png)
 

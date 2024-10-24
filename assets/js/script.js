@@ -11,6 +11,8 @@ const tiles = Array.from(document.querySelectorAll('.tile'));
 const scoreBtn = document.getElementById("score-btn");
 let alertMsg = document.getElementById("alert");
 let scoreDisplay = document.getElementById("score-display");
+let = diceNum1 = document.querySelector(".img1");
+let = diceNum2 = document.querySelector(".img2");
 let sumOfDice = 0;
 let flippedTileArray = [];
 let tempFlippedTileArray = [];
@@ -18,11 +20,10 @@ let scoreArray = [];
 let pickedTileOne = 0;
 let pickedTileTwo = 0;
 let pickedTileThree = 0;
-let diceNum1;
-let diceNum2;
+
 
 /**
- * Function to hide or unhide homegame screen and game screen by adding event listener to game button and cal for reset game function
+ * Function to hide or unhide homegame screen and game screen by adding event listener to game button and call for reset game function
  */
 function unhideGame() {    
     home.style.display = "none";
@@ -66,8 +67,6 @@ startPageBtn.addEventListener('click', showStart);
 rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
 
 function rollTheDice() {
-    diceNum1 = document.querySelector(".img1");
-    diceNum2 = document.querySelector(".img2");
 
     diceNum1.setAttribute("src","assets/image/game-page-image/rolling-dice1.gif");
     diceNum2.setAttribute("src","assets/image/game-page-image/rolling-dice2.gif");
@@ -84,8 +83,6 @@ function rollTheDice() {
         sumOfDice = randomNumber1 + randomNumber2;
 
         setAlertMessage('Now select a tile!');
-
-        toggleButtons(false)
         
         return sumOfDice;
 
@@ -95,7 +92,7 @@ function rollTheDice() {
 
 /**
  * Function to allow player to flip tiles. Onclick method is used for accuracy. if-else statements are set to meet each senario. 
- * The funciton takes one parameter which is the event from the click. Some if-else sstatement activate the calculateScore function
+ * The funciton takes one parameter which is the event from the click. Some if-else statement activate the calculateScore function.
  */
 function flipTile(event) {
     let chosenTileValue = event;
@@ -134,7 +131,6 @@ function flipTile(event) {
         document.getElementById('tile' + event).style.visibility = "hidden";
         pickedTileOne = 0;
         sumOfDice = 0;
-        toggleButtons(true)
         rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
         return setAlertMessage("Great job!");
     } else if (chosenTileValue == sumOfDice && tempFlippedTileArray.length === 0 && flippedTileArray.length === 8)  {
@@ -175,7 +171,6 @@ function flipTile(event) {
         document.getElementById('tile' + pickedTileOne).style.visibility = "hidden";
         pickedTileOne = 0;
         sumOfDice = 0;
-        toggleButtons(true)
         rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
         return setAlertMessage("Great job!");
     } else if ((chosenTileValue + pickedTileOne) == sumOfDice && chosenTileValue !== pickedTileOne && flippedTileArray.length === 8) {
@@ -248,7 +243,6 @@ function flipTile(event) {
         document.getElementById('tile' + pickedTileOne).style.visibility = "hidden";
         document.getElementById('tile' + pickedTileTwo).style.visibility = "hidden";
         document.getElementById('tile' + pickedTileThree).style.visibility = "hidden";
-        toggleButtons(true);
         rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
         return setAlertMessage('Great job!');
     } else if ((chosenTileValue + pickedTileOne + pickedTileTwo + pickedTileThree) == sumOfDice && tempFlippedTileArray.length === 3 && chosenTileValue !== pickedTileOne && chosenTileValue !== pickedTileTwo && chosenTileValue !== pickedTileThree && flippedTileArray.length === 8) {  
@@ -269,22 +263,13 @@ function flipTile(event) {
     }
 } 
 
+/**
+ * Function to display alert messages.
+ */
 function setAlertMessage(message) {
     alertMsg.style.display = "block",
     alertMsg.innerHTML = message
-  }
-
-  function toggleButtons(state) {
-    document.getElementById('tile1').disabled = state;
-    document.getElementById('tile2').disabled = state;
-    document.getElementById('tile3').disabled = state;
-    document.getElementById('tile4').disabled = state;
-    document.getElementById('tile5').disabled = state;
-    document.getElementById('tile6').disabled = state;
-    document.getElementById('tile7').disabled = state;
-    document.getElementById('tile8').disabled = state;
-    document.getElementById('tile9').disabled = state;
-  }
+}
 
 /**
  * Function to calculate score once game over or player can no longer flip any tiles. 
@@ -342,7 +327,6 @@ function resetGame() {
 
         rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
 
-        toggleButtons(false)
     });
 
 return;

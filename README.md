@@ -176,6 +176,13 @@ _ _ _
 ![CSS validation result](/assets/image/readme-image/css-validation-result.png)
 </details>
 
+<details>
+<summary>script.js
+</summary>
+
+![JSHint validation result](/assets/image/readme-image/jshint-validation-result.png)
+</details>
+
 ### Manual Testing
 
 * The application was tested on Google Chrome, Microsoft Edge, and Safari browser.

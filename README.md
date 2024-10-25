@@ -43,6 +43,23 @@ The app also provides a  clear instruction of how to play. Buttons allowing play
 
 During game play messages are alert to help guid players through the game. Reset button is provided for easy game resetting if player wants to start a new game.
 
+* First-time visitor goals
+     * Looking for game to enjoy amonng family or friends. Looking for game that can be use to teach their children simple addition and subtraction. Looking for game that they have played before on non-computer version.
+     * Understand the rules of the game and how to use the game control.
+     * Easily navigate throughout the whole app with displayed alert messages that clearly guid player how to play.
+     * Be drawn to responsive design that allow for enjoyable experience when accessing the site from any devices.
+     * Be urged to try again and again to win the game buy shutting the box.
+
+* Returning visitors goals
+    * Players who could not shut the box the first time and want to try new strategy to win the game or beat their previous score.
+    * Player who want to introduce the game to their family and friends.
+
+* Frequent user goals
+    * Player who really enjoy the game and drown to the game by the challege of winning the game.
+    * Player who look forward to game update that may include new features. 
+- - -
+
+
 ## Design
 
 * Colour Scheme

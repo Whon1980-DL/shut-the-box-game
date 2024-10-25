@@ -110,7 +110,7 @@ During game play messages are alert to help guid players through the game. Reset
 * The Main Game Canvas Area
     * This area of the game page shows all 9 interactive tiles and dice that will be used for rolling to get the sum. 
     * These tiles are interactive where player can select tile/s after rolling the dice from here. The tile will also change colour after being selected and will become invisible altogether once the sum of dice is met either by the flipped tile itself being equal to sum of dice or subsequence selection adding to it to become equal to sum of dice. This help player keeping track of the progress. 
-    * This area also is where all the alert messages to guid player through the game is displayed in gold colour. The message will alert if the correct process of the game isn't followed such as if player select a tile without rolling the dice first an alert message will show as Please roll the dice!.
+    * This area also is where all the alert messages to guid player through the game is displayed in gold colour. 
 
     ![Main Game Canvas](assets/image/readme-image/main-game-canvas.png)
 

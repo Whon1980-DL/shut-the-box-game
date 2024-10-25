@@ -116,13 +116,14 @@ During game play messages are alert to help guid players through the game. Reset
 
 * Game Control Area and Score Display
     * This area contain Roll The Dice button that allows the player to initiate the game. 
-    * A feature is implementedd so that dice can only be rolled once after which a tile needs to be flip thus preventing any player who may not like what they see and want to roll the dice again before fliping a tile.
+    * A feature is implemented so that dice can only be rolled once after which a tile needs to be flip thus preventing any player who may not like what they see and want to roll the dice again before fliping a tile.
     * Calculate Score button is also available in the situation when the game does not calculate the score automatically. The score is displayed below the buttons for player to take note of their score and to compare with other players. 
     
     ![Game Control Area and Score Display](assets/image/readme-image/game-control-area-score-display.png)
 
 * The Game Results
     * When player flip the tiles and the sum is equal to sum of dice the tiles will disappear and message will show Great Job!. When player flip a tile/s but the sum of their selected tile is still less than sum of dice the game will prompt player to select another tile with a message Flip another tile. If the tiles left can not be used to add up to sum of dice the game will display game over and score display automatically as well as Game Over message displayed. 
+    * The tile buttons are disabled when sum of dice is met and when game is over. The tile buttons become enabled again when "Roll the dice" button is clocked.
     * Various if-else statement are used to meet each possible outcome of tile/s selection. If the game over is not triggered automatically the user can also trigger it by clicking on calculate score where a score will be displayed and game over. 
     * The game score is displayed clearly for player to take note in order to compare to see who the winner is.
     * In the situation when player manage to flip all the tiles in one game, the alert will also let them know that they have shut the box by congratulate them and therefore automatically declared a winner of the game message displayed. 
@@ -217,10 +218,10 @@ _ _ _
 | Checking Lighthouse for desktop device successful      | <span style="background-color: green; padding: 3px;">YES</span>|
 | I clicked on the "START GAME" and "HOW TO PLAY" buttons      | <span style="background-color: green; padding: 3px;">YES</span>|
 | I clicked on "EXIT GAME" and "RESET GAME" buttons       |<span style="background-color: green; padding: 3px;">YES</span>|
-| I clicked on ech tile before rolling th dice messag alert "Please roll the dice!"       |<span style="background-color: green; padding: 3px;">YES</span>|
-| I also checked that the "Start" and "New Game" buttons change color and are visually different after being pressed|<span style="background-color: green; padding: 3px;">YES</span>|
-| Checked whether the player's name, time and rating are displayed in the results table       |<span style="background-color: green; padding: 3px;">YES</span>|
-|I checked whether amethe player's rating changes depending on the time spent by the player on the game|<span style="background-color: green; padding: 3px;">YES</span>|
+| I clicked on each tile before rolling the dice and there is no response       |<span style="background-color: green; padding: 3px;">YES</span>|
+| I clicked on "ROLL THE DICE" buttons.               |<span style="background-color: green; padding: 3px;">YES</span>|
+| I clicked on tile button after rolling the dice     |<span style="background-color: green; padding: 3px;">YES</span>|
+| I clicked on "CALCULATE SCORE" button.              |<span style="background-color: green; padding: 3px;">YES</span>|
 
 
 ### Lighthouse Report

@@ -208,6 +208,21 @@ _ _ _
 * Family and friends were asked to review the application for a better understanding of the user experience.
 * Dev Tools was used to test how the site looks on various screen sizes and console log was used extensively to see which function was executed.
 
+| What was done | Working correctly? |
+|---------------------|:---------------------:|
+| Checking the HTML code on Validator HTML successful      | <span style="background-color: green; padding: 3px;">YES</span>        |
+| Checking the CSS code on Validator CSS successful      |<span style="background-color: green; padding: 3px;">YES</span>|
+| Checking the JavaScript code on JSHint successful      |<span style="background-color: green; padding: 3px;">YES</span>|
+| Checking Lighthouse for mobile device  successful      | <span style="background-color: green; padding: 3px;">YES</span>|
+| Checking Lighthouse for desktop device successful      | <span style="background-color: green; padding: 3px;">YES</span>|
+| I clicked on the "START GAME" and "HOW TO PLAY" buttons      | <span style="background-color: green; padding: 3px;">YES</span>|
+| I clicked on "EXIT GAME" and "RESET GAME" buttons       |<span style="background-color: green; padding: 3px;">YES</span>|
+| I clicked on ech tile before rolling th dice messag alert "Please roll the dice!"       |<span style="background-color: green; padding: 3px;">YES</span>|
+| I also checked that the "Start" and "New Game" buttons change color and are visually different after being pressed|<span style="background-color: green; padding: 3px;">YES</span>|
+| Checked whether the player's name, time and rating are displayed in the results table       |<span style="background-color: green; padding: 3px;">YES</span>|
+|I checked whether amethe player's rating changes depending on the time spent by the player on the game|<span style="background-color: green; padding: 3px;">YES</span>|
+
+
 ### Lighthouse Report
 
 #### Mobile analysis

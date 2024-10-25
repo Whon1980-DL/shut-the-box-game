@@ -1,5 +1,7 @@
 /*jshint esversion: 6 */
 
+/*jshint esversion: 6 */
+
 /**
  * Declare constants for DOM elements and variables for array
  */
@@ -11,6 +13,7 @@ const startPageBtn = document.getElementById("ext-btn");
 const rollDiceBtn = document.getElementById("dice-btn");
 const tiles = Array.from(document.querySelectorAll('.tile'));
 const scoreBtn = document.getElementById("score-btn");
+
 let alertMsg = document.getElementById("alert");
 let scoreDisplay = document.getElementById("score-display");
 let diceNum1 = document.querySelector(".img1");
@@ -84,6 +87,8 @@ function rollTheDice() {
 
         sumOfDice = randomNumber1 + randomNumber2;
 
+        toggleButtons(false);
+
         setAlertMessage('Now select a tile!');
         
         return sumOfDice;
@@ -99,26 +104,24 @@ function rollTheDice() {
 function flipTile(event) {
     let chosenTileValue = event;
     
-    if (sumOfDice == 0) {
-        chosenTileValue = 0;
-        return setAlertMessage("Please roll the dice!");
-    } else if (chosenTileValue > sumOfDice && tempFlippedTileArray.length === 0 && flippedTileArray.length > 7) {  
+    if (chosenTileValue > sumOfDice && tempFlippedTileArray.length === 0 && flippedTileArray.length > 7) {  
         calculateScore();
         tiles.forEach(tile => {
             tile.removeAttribute("onclick");
         });
+        toggleButtons(true);
         return setAlertMessage("Game Over!");
     } else if (chosenTileValue > sumOfDice && tempFlippedTileArray.length === 0) {  
         return setAlertMessage("Wrong flip!");
     } else if (chosenTileValue < sumOfDice && tempFlippedTileArray.length === 0 && flippedTileArray.length > 7) {
         pickedTileOne = tempFlippedTileArray[0];
-        //document.getElementById('tile' + event).style.backgroundColor = "brown";
-        //document.getElementById('tile' + event).style.color = "cornsilk";
-        setTileSelected();
+        document.getElementById('tile' + event).style.backgroundColor = "brown";
+        document.getElementById('tile' + event).style.color = "cornsilk";
         tiles.forEach(tile => {
             tile.removeAttribute("onclick");
         });
         calculateScore();
+        toggleButtons(true);
         return setAlertMessage("Game Over!");
     } else if (chosenTileValue < sumOfDice && tempFlippedTileArray.length === 0) {
         flippedTileArray.push(chosenTileValue); 
@@ -133,8 +136,8 @@ function flipTile(event) {
         scoreArray.push(sumOfDice);
         document.getElementById('tile' + event).style.visibility = "hidden";
         pickedTileOne = 0;
-        sumOfDice = 0;
         rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
+        toggleButtons(true);
         return setAlertMessage("Great job!");
     } else if (chosenTileValue == sumOfDice && tempFlippedTileArray.length === 0 && flippedTileArray.length === 8)  {
         flippedTileArray.push(chosenTileValue);
@@ -142,7 +145,6 @@ function flipTile(event) {
         scoreArray.push(sumOfDice);
         document.getElementById('tile' + event).style.visibility = "hidden";
         pickedTileOne = 0;
-        sumOfDice = 0;
         rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
         return setAlertMessage("Congratulation! You just shut the box!");
     } else if ((chosenTileValue + pickedTileOne) > sumOfDice && flippedTileArray.length > 4) {  
@@ -150,6 +152,7 @@ function flipTile(event) {
             tile.removeAttribute("onclick");
         });
         calculateScore();
+        toggleButtons(true);
         return setAlertMessage("Game Over!");
     } else if ((chosenTileValue + pickedTileOne) > sumOfDice) {  
         return setAlertMessage("Wrong flip!");
@@ -158,6 +161,7 @@ function flipTile(event) {
             tile.removeAttribute("onclick");
         });
         calculateScore();
+        toggleButtons(true);
         return setAlertMessage("Game Over!");
     } else if ((chosenTileValue + pickedTileOne) < sumOfDice && tempFlippedTileArray.length === 1 && chosenTileValue !== pickedTileOne) {  
         flippedTileArray.push(chosenTileValue);
@@ -173,8 +177,8 @@ function flipTile(event) {
         document.getElementById('tile' + event).style.visibility = "hidden";
         document.getElementById('tile' + pickedTileOne).style.visibility = "hidden";
         pickedTileOne = 0;
-        sumOfDice = 0;
         rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
+        toggleButtons(true);
         return setAlertMessage("Great job!");
     } else if ((chosenTileValue + pickedTileOne) == sumOfDice && chosenTileValue !== pickedTileOne && flippedTileArray.length === 8) {
         flippedTileArray.push(chosenTileValue);
@@ -183,7 +187,6 @@ function flipTile(event) {
         document.getElementById('tile' + event).style.visibility = "hidden";
         document.getElementById('tile' + pickedTileOne).style.visibility = "hidden";
         pickedTileOne = 0;
-        sumOfDice = 0;
         rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
         return setAlertMessage("Congratulation! You just shut the box!");
     } else if ((chosenTileValue + pickedTileOne + pickedTileTwo) > sumOfDice && tempFlippedTileArray.length === 2 && chosenTileValue !== pickedTileOne && chosenTileValue !== pickedTileTwo) {  
@@ -203,6 +206,7 @@ function flipTile(event) {
             tile.removeAttribute("onclick");
         });
         calculateScore();
+        toggleButtons(true);
         return setAlertMessage("Game Over!");
     } else if ((chosenTileValue + pickedTileOne + pickedTileTwo) < sumOfDice && tempFlippedTileArray.length === 2 && chosenTileValue !== pickedTileOne && chosenTileValue !== pickedTileTwo) {  
         flippedTileArray.push(chosenTileValue);
@@ -236,6 +240,7 @@ function flipTile(event) {
             tile.removeAttribute("onclick");
         });
         calculateScore();
+        toggleButtons(true);
         return setAlertMessage('Game Over!');
     } else if ((chosenTileValue + pickedTileOne + pickedTileTwo + pickedTileThree) == sumOfDice && tempFlippedTileArray.length === 3 && chosenTileValue !== pickedTileOne && chosenTileValue !== pickedTileTwo && chosenTileValue !== pickedTileThree && flippedTileArray.length !== 8) {  
         flippedTileArray.push(chosenTileValue);
@@ -246,6 +251,7 @@ function flipTile(event) {
         document.getElementById('tile' + pickedTileTwo).style.visibility = "hidden";
         document.getElementById('tile' + pickedTileThree).style.visibility = "hidden";
         rollDiceBtn.addEventListener('click', rollTheDice, { once: true });
+        toggleButtons(true);
         return setAlertMessage('Great job!');
     } else if ((chosenTileValue + pickedTileOne + pickedTileTwo + pickedTileThree) == sumOfDice && tempFlippedTileArray.length === 3 && chosenTileValue !== pickedTileOne && chosenTileValue !== pickedTileTwo && chosenTileValue !== pickedTileThree && flippedTileArray.length === 8) {  
         flippedTileArray.push(chosenTileValue);
@@ -260,6 +266,7 @@ function flipTile(event) {
             tile.removeAttribute("onclick");
         });
         calculateScore();
+        toggleButtons(true);
         return setAlertMessage('Game Over!');
     }
 } 
@@ -270,6 +277,21 @@ function flipTile(event) {
 function setAlertMessage(message) {
     alertMsg.style.display = "block",
     alertMsg.innerHTML = message;
+}
+
+/**
+ * Function to disable tile buttons. 
+ */
+function toggleButtons(state) {
+    document.getElementById("tile1").disabled = state;
+    document.getElementById("tile2").disabled = state;
+    document.getElementById("tile3").disabled = state;
+    document.getElementById("tile4").disabled = state;
+    document.getElementById("tile5").disabled = state;
+    document.getElementById("tile6").disabled = state;
+    document.getElementById("tile7").disabled = state;
+    document.getElementById("tile8").disabled = state;
+    document.getElementById("tile9").disabled = state;
 }
 
 /**
@@ -284,6 +306,8 @@ function calculateScore() {
     let displayScore = 45 - sumOfChosenTile;
     scoreDisplay.style.display = "block"; 
     document.getElementById("score-number").innerText = displayScore;
+
+    toggleButtons(true);
 
     setAlertMessage('Game Over!');
 }
@@ -317,11 +341,12 @@ function resetGame() {
         pickedTileTwo = 0;
         pickedTileThree = 0;
 
+        toggleButtons(true);
+
         diceNum1.setAttribute("src","assets/image/game-page-image/dice6.png");
         diceNum2.setAttribute("src","assets/image/game-page-image/dice6.png");
 
-        alertMsg.style.display = 'none';
-        alertMsg.innerHTML = "";
+        setAlertMessage("Please roll the dice to begin");
 
         scoreDisplay.style.display = "none"; 
         document.getElementById("score-number").innerText = "";
